@@ -18,7 +18,7 @@ class ProjectsListViewController: NSViewController {
     
     var viewModel: ProjectsListViewModel! = ProjectsListViewModel() { didSet { reload() } }
     
-    // MARK:- Lifecicle
+    // MARK:- Lifecycle
     
     override func viewWillAppear() {
         super.viewWillAppear()
@@ -41,20 +41,20 @@ extension ProjectsListViewController {
 extension ProjectsListViewController: NSOutlineViewDataSource {
     
     func outlineView(_ outlineView: NSOutlineView, numberOfChildrenOfItem item: Any?) -> Int {
-        guard let item = item else { return viewModel.numberOfProjects }
-        guard let project = item as? Project else { return 0 }
-        return viewModel.numberOfResources(in: project)
+        guard let item = item else { return viewModel.numberOfChilds }
+        guard let dataContext = item as? OutlineDataContext else { return 0 }
+        return dataContext.numberOfChilds
     }
     
     func outlineView(_ outlineView: NSOutlineView, child index: Int, ofItem item: Any?) -> Any {
-        guard let item = item else { return viewModel.project(for: index) }
-        guard let project = item as? Project else { fatalError() }
-        return viewModel.resource(for: index, from: project)
+        guard let item = item else { return viewModel.child(at: index) }
+        guard let dataContext = item as? OutlineDataContext else { fatalError() }
+        return dataContext.child(at: index)
     }
     
     func outlineView(_ outlineView: NSOutlineView, isItemExpandable item: Any) -> Bool {
-        guard let project = item as? Project else { return false }
-        return !project.resources.isEmpty
+        guard let dataContext = item as? OutlineDataContext else { return false }
+        return dataContext.isExpandable
     }
     
 }
@@ -65,8 +65,8 @@ extension ProjectsListViewController: NSOutlineViewDelegate {
         let view = TableCellView.dequeue(from: outlineView, for: self) as TableCellView
         
         switch item {
-        case let project as Project: view.textField?.stringValue = project.name
-        case let resource as Resource: view.textField?.stringValue = resource.name
+        case let project as ProjectViewModel: view.textField?.stringValue = project.name
+        case let resource as ResourceViewModel: view.textField?.stringValue = resource.name
         default: fatalError()
         }
         

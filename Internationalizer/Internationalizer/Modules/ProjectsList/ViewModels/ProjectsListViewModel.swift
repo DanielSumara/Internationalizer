@@ -12,9 +12,9 @@ class ProjectsListViewModel {
     
     // MARK:- Properties
     
-    private let dataSource: [Project]
+    fileprivate let dataSource: [ProjectViewModel]
     
-    // MARK:- Lifecicle
+    // MARK:- Lifecycle
     
     init() {
         let r1 = Resource(name: "R1", path: "", kind: .storyboard)
@@ -29,25 +29,15 @@ class ProjectsListViewModel {
         
         let p2 = Project(name: "P2", path: "", kind: .framework, resources: [r5, r6])
         
-        dataSource = [p1, p2]
+        dataSource = [ProjectViewModel(from: p1), ProjectViewModel(from: p2)]
     }
     
-    // MARK:- Calculated properties
+}
+
+extension ProjectsListViewModel: OutlineDataContext {
     
-    var numberOfProjects: Int { return dataSource.count }
+    var numberOfChilds: Int { return dataSource.count }
     
-    // MARK:- API
-    
-    func numberOfResources(in project: Project) -> Int {
-        return project.resources.count
-    }
-    
-    func project(for index: Int) -> Project {
-        return dataSource[index]
-    }
-    
-    func resource(for index: Int, from project: Project) -> Resource {
-        return project.resources[index]
-    }
+    func child(at index: Int) -> Any { return dataSource[index] }
     
 }

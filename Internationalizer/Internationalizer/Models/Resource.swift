@@ -14,20 +14,6 @@ public struct Resource {
     
     let name: String
     let path: String
-    let kind: Kind
-    
-}
-
-extension Resource {
-    
-    // MARK:- Content
-    
-    enum Kind {
-        
-        case storyboard
-        case strings
-        case xib
-        
-    }
+    let kind: ResourceKind
     
 }

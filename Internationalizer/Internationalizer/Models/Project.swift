@@ -14,20 +14,8 @@ public struct Project {
     
     public let name: String
     public let path: String
-    public let kind: Kind
+    public let kind: ProjectKind
     public let resources: [Resource]
     
 }
 
-extension Project {
-    
-    // MARK:- Content
-    
-    public enum Kind {
-        
-        case application
-        case framework
-        
-    }
-    
-}
