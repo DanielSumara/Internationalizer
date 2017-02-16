@@ -64,11 +64,10 @@ extension ProjectsListViewController: NSOutlineViewDelegate {
     func outlineView(_ outlineView: NSOutlineView, viewFor tableColumn: NSTableColumn?, item: Any) -> NSView? {
         let view = TableCellView.dequeue(from: outlineView, for: self) as TableCellView
         
-        switch item {
-        case let project as ProjectViewModel: view.textField?.stringValue = project.name
-        case let resource as ResourceViewModel: view.textField?.stringValue = resource.name
-        default: fatalError()
-        }
+        guard let navigatorItem = item as? NavigatorItem else { fatalError() }
+        
+        view.textField?.stringValue = navigatorItem.name
+        view.imageView?.image = navigatorItem.icon
         
         return view
     }

@@ -6,7 +6,7 @@
 //  Copyright © 2017 Daniel Sumara. All rights reserved.
 //
 
-import Foundation
+import AppKit
 
 class ProjectViewModel {
     
@@ -37,5 +37,16 @@ extension ProjectViewModel: OutlineDataContext {
     var numberOfChilds: Int { return resources.count }
     
     func child(at index: Int) -> Any { return resources[index] }
+    
+}
+
+extension ProjectViewModel: NavigatorItem {
+    
+    var icon: NSImage {
+        switch kind {
+        case .application: return R.Images.application
+        case .framework: return R.Images.framework
+        }
+    }
     
 }

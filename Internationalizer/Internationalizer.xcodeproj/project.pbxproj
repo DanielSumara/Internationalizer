@@ -21,6 +21,8 @@
 		09CD18C01E56531400CA7C41 /* ProjectKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CD18BF1E56531400CA7C41 /* ProjectKind.swift */; };
 		09CD18C21E56534200CA7C41 /* ResourceKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CD18C11E56534200CA7C41 /* ResourceKind.swift */; };
 		09CD18C61E56557B00CA7C41 /* OutlineDataContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CD18C51E56557B00CA7C41 /* OutlineDataContext.swift */; };
+		09CD18C81E565CDB00CA7C41 /* R.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CD18C71E565CDB00CA7C41 /* R.swift */; };
+		09CD18CB1E565E6300CA7C41 /* NavigatorItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CD18CA1E565E6300CA7C41 /* NavigatorItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 		09CD18BF1E56531400CA7C41 /* ProjectKind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectKind.swift; sourceTree = "<group>"; };
 		09CD18C11E56534200CA7C41 /* ResourceKind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourceKind.swift; sourceTree = "<group>"; };
 		09CD18C51E56557B00CA7C41 /* OutlineDataContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutlineDataContext.swift; sourceTree = "<group>"; };
+		09CD18C71E565CDB00CA7C41 /* R.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.swift; sourceTree = "<group>"; };
+		09CD18CA1E565E6300CA7C41 /* NavigatorItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigatorItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +121,7 @@
 			children = (
 				091B3BCC1E54DDC70033A6E7 /* Main.storyboard */,
 				091B3BCF1E54DE990033A6E7 /* Application.xcassets */,
+				09CD18C71E565CDB00CA7C41 /* R.swift */,
 			);
 			name = Resouarces;
 			path = Resources;
@@ -159,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				091B3BD81E54F5090033A6E7 /* ProjectsListViewController.swift */,
+				09CD18C91E565E3400CA7C41 /* Contracts */,
 				091B3BDF1E54FE110033A6E7 /* ViewModels */,
 			);
 			path = ProjectsList;
@@ -205,6 +211,14 @@
 			isa = PBXGroup;
 			children = (
 				09CD18C51E56557B00CA7C41 /* OutlineDataContext.swift */,
+			);
+			path = Contracts;
+			sourceTree = "<group>";
+		};
+		09CD18C91E565E3400CA7C41 /* Contracts */ = {
+			isa = PBXGroup;
+			children = (
+				09CD18CA1E565E6300CA7C41 /* NavigatorItem.swift */,
 			);
 			path = Contracts;
 			sourceTree = "<group>";
@@ -313,6 +327,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09CD18C81E565CDB00CA7C41 /* R.swift in Sources */,
 				09CD18BB1E560A9600CA7C41 /* ProjectViewModel.swift in Sources */,
 				091B3BD91E54F5090033A6E7 /* ProjectsListViewController.swift in Sources */,
 				091B3BD51E54F4210033A6E7 /* TableCellView.swift in Sources */,
@@ -323,6 +338,7 @@
 				09CD18C01E56531400CA7C41 /* ProjectKind.swift in Sources */,
 				09CD18BD1E560AA900CA7C41 /* ResourceViewModel.swift in Sources */,
 				09CD18C61E56557B00CA7C41 /* OutlineDataContext.swift in Sources */,
+				09CD18CB1E565E6300CA7C41 /* NavigatorItem.swift in Sources */,
 				091B3BDC1E54F6410033A6E7 /* Project.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

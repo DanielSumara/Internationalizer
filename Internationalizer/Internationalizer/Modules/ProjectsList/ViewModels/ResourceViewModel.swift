@@ -6,7 +6,7 @@
 //  Copyright © 2017 Daniel Sumara. All rights reserved.
 //
 
-import Foundation
+import AppKit
 
 class ResourceViewModel {
     
@@ -26,6 +26,14 @@ class ResourceViewModel {
         name = resource.name
         kind = resource.kind
         path = resource.path
+    }
+    
+}
+
+extension ResourceViewModel: NavigatorItem {
+    
+    var icon: NSImage {
+        return #imageLiteral(resourceName: "IconFramwork")
     }
     
 }

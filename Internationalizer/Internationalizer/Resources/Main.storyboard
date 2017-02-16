@@ -709,16 +709,16 @@
                                             </textFieldCell>
                                             <prototypeCellViews>
                                                 <tableCellView identifier="TableCellView" id="Hrg-PP-Bwo" customClass="TableCellView" customModule="Internationalizer" customModuleProvider="target">
-                                                    <rect key="frame" x="1" y="1" width="200" height="17"/>
+                                                    <rect key="frame" x="1" y="1" width="116" height="17"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
                                                         <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f6U-dL-IzG">
                                                             <rect key="frame" x="4.5" y="0.0" width="17" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSActionTemplate" id="2HF-BU-BvB"/>
+                                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSIconViewTemplate" id="2HF-BU-BvB"/>
                                                         </imageView>
                                                         <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e7f-wz-GFJ">
-                                                            <rect key="frame" x="25" y="0.0" width="266" height="17"/>
+                                                            <rect key="frame" x="25" y="0.0" width="182" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                             <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="R7L-CG-F6g">
                                                                 <font key="font" metaFont="system"/>
@@ -743,7 +743,7 @@
                             </subviews>
                         </clipView>
                         <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="Ghq-37-4Lr">
-                            <rect key="frame" x="-100" y="-100" width="237.5" height="16"/>
+                            <rect key="frame" x="-100" y="-100" width="238" height="16"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                         <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="u2s-7G-SKm">
@@ -761,6 +761,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="NSActionTemplate" width="14" height="14"/>
+        <image name="NSIconViewTemplate" width="10" height="10"/>
     </resources>
 </document>
