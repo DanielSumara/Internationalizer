@@ -24,6 +24,7 @@ class ProjectsListViewController: NSViewController {
         super.viewWillAppear()
         
         reload()
+        outlineView.expandItem(nil, expandChildren: true)
     }
     
 }

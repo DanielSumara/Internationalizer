@@ -33,7 +33,11 @@ class ResourceViewModel {
 extension ResourceViewModel: NavigatorItem {
     
     var icon: NSImage {
-        return #imageLiteral(resourceName: "IconFramwork")
+        switch kind {
+        case .storyboard: return R.Images.storyboard
+        case .strings: return R.Images.strings
+        case .xib: return R.Images.xib
+        }
     }
     
 }

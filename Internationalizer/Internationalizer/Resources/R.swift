@@ -12,8 +12,11 @@ enum R {
     
     enum Images {
         
-        static var framework: NSImage { return #imageLiteral(resourceName: "IconFramwork") }
         static var application: NSImage { return #imageLiteral(resourceName: "IconApplication") }
+        static var framework: NSImage { return #imageLiteral(resourceName: "IconFramwork") }
+        static var storyboard: NSImage { return #imageLiteral(resourceName: "IconStoryboard") }
+        static var strings: NSImage { return #imageLiteral(resourceName: "IconStrings") }
+        static var xib: NSImage { return #imageLiteral(resourceName: "IconXib") }
         
     }
     
