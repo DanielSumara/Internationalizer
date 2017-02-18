@@ -29,7 +29,20 @@ class ProjectsListViewModel {
         
         let p2 = Project(name: "Framework1", path: "", kind: .framework, resources: [r5, r6])
         
-        dataSource = [ProjectViewModel(from: p1), ProjectViewModel(from: p2)]
+        let r7 = Resource(name: "Reports", path: "", kind: .storyboard)
+        let r8 = Resource(name: "Reports", path: "", kind: .strings)
+        let r9 = Resource(name: "ReportTypeDescriptions", path: "", kind: .strings)
+        
+        let p3 = Project(name: "Reports", path: "", kind: .framework, resources: [r7, r8, r9])
+        
+        let p4 = Project(name: "Project w/o resources", path: "", kind: .framework, resources: [])
+        
+        dataSource = [
+            ProjectViewModel(from: p1),
+            ProjectViewModel(from: p2),
+            ProjectViewModel(from: p3),
+            ProjectViewModel(from: p4)
+        ]
     }
     
 }

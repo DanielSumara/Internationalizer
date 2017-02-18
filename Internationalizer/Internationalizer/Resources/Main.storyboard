@@ -688,7 +688,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <visualEffectView appearanceType="vibrantDark" blendingMode="behindWindow" material="light" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="3aF-su-Qgx">
+                            <visualEffectView blendingMode="behindWindow" material="appearanceBased" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="3aF-su-Qgx">
                                 <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                             </visualEffectView>
                             <box boxType="custom" borderType="none" cornerRadius="4" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="wXq-cy-HpX">
@@ -697,6 +697,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="450" height="30"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
+                                        <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="V6u-m4-Qqc">
+                                            <rect key="frame" x="8" y="27" width="434" height="5"/>
+                                        </box>
                                         <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tc6-Rm-xa6">
                                             <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
                                             <constraints>
@@ -707,11 +710,25 @@
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
                                         </button>
+                                        <searchField wantsLayer="YES" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wLV-gr-W2c">
+                                            <rect key="frame" x="30" y="4" width="412" height="22"/>
+                                            <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" alignment="left" usesSingleLineMode="YES" bezelStyle="round" id="Zre-ss-FuG">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </searchFieldCell>
+                                        </searchField>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="V6u-m4-Qqc" firstAttribute="leading" secondItem="kEj-fc-cKc" secondAttribute="leading" constant="8" id="0ur-cf-JUA"/>
+                                        <constraint firstItem="wLV-gr-W2c" firstAttribute="centerY" secondItem="kEj-fc-cKc" secondAttribute="centerY" id="19q-Dg-GGU"/>
                                         <constraint firstItem="tc6-Rm-xa6" firstAttribute="leading" secondItem="kEj-fc-cKc" secondAttribute="leading" id="7ty-Bq-K5I"/>
                                         <constraint firstItem="tc6-Rm-xa6" firstAttribute="top" secondItem="kEj-fc-cKc" secondAttribute="top" id="CRn-MB-zKu"/>
                                         <constraint firstAttribute="bottom" secondItem="tc6-Rm-xa6" secondAttribute="bottom" id="O37-Aw-BPt"/>
+                                        <constraint firstItem="V6u-m4-Qqc" firstAttribute="top" secondItem="kEj-fc-cKc" secondAttribute="top" id="iry-Ed-XBG"/>
+                                        <constraint firstItem="wLV-gr-W2c" firstAttribute="leading" secondItem="tc6-Rm-xa6" secondAttribute="trailing" id="jg9-GS-m03"/>
+                                        <constraint firstAttribute="trailing" secondItem="V6u-m4-Qqc" secondAttribute="trailing" constant="8" id="sVR-Ds-euq"/>
+                                        <constraint firstAttribute="trailing" secondItem="wLV-gr-W2c" secondAttribute="trailing" constant="8" id="svo-UN-YYB"/>
                                     </constraints>
                                 </view>
                                 <constraints>
