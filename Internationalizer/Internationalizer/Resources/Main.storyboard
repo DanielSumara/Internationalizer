@@ -688,6 +688,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
+                            <visualEffectView appearanceType="vibrantDark" blendingMode="behindWindow" material="light" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="3aF-su-Qgx">
+                                <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                            </visualEffectView>
                             <box boxType="custom" borderType="none" cornerRadius="4" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="wXq-cy-HpX">
                                 <rect key="frame" x="0.0" y="0.0" width="450" height="30"/>
                                 <view key="contentView" id="kEj-fc-cKc">
@@ -789,10 +792,14 @@
                             <constraint firstAttribute="trailing" secondItem="4hg-G6-lcR" secondAttribute="trailing" id="5tj-15-aYH"/>
                             <constraint firstAttribute="bottom" secondItem="wXq-cy-HpX" secondAttribute="bottom" id="Lee-LS-0Ji"/>
                             <constraint firstAttribute="trailing" secondItem="wXq-cy-HpX" secondAttribute="trailing" id="QsW-NY-fpB"/>
+                            <constraint firstAttribute="bottom" secondItem="3aF-su-Qgx" secondAttribute="bottom" id="RE0-YN-bV2"/>
+                            <constraint firstAttribute="trailing" secondItem="3aF-su-Qgx" secondAttribute="trailing" id="Sm2-ME-fIH"/>
+                            <constraint firstItem="3aF-su-Qgx" firstAttribute="top" secondItem="WIp-df-JTf" secondAttribute="top" id="X08-rs-Aks"/>
                             <constraint firstItem="wXq-cy-HpX" firstAttribute="leading" secondItem="WIp-df-JTf" secondAttribute="leading" id="Zrg-CY-UQy"/>
                             <constraint firstItem="4hg-G6-lcR" firstAttribute="leading" secondItem="WIp-df-JTf" secondAttribute="leading" id="a1q-4a-TLR"/>
                             <constraint firstItem="4hg-G6-lcR" firstAttribute="top" secondItem="WIp-df-JTf" secondAttribute="top" id="ssg-RT-0uu"/>
                             <constraint firstItem="wXq-cy-HpX" firstAttribute="top" secondItem="4hg-G6-lcR" secondAttribute="bottom" id="uKN-XP-7oG"/>
+                            <constraint firstItem="3aF-su-Qgx" firstAttribute="leading" secondItem="WIp-df-JTf" secondAttribute="leading" id="yH7-9H-v9c"/>
                         </constraints>
                     </view>
                     <connections>
