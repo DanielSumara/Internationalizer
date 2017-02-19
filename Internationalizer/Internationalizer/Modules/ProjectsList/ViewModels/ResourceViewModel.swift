@@ -14,7 +14,7 @@ class ResourceViewModel {
     
     let name: String
     let kind: ResourceKind
-    let path: String
+    let paths: [URL]
     
     fileprivate let resource: Resource
     
@@ -25,7 +25,7 @@ class ResourceViewModel {
         
         name = resource.name
         kind = resource.kind
-        path = resource.path
+        paths = resource.paths
     }
     
 }

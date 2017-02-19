@@ -16,6 +16,18 @@ public enum ResourceKind {
     case strings
     case xib
     
+    // MARK:- Lifecycle
+    
+    public init?(from fileExtension: String) {
+        guard ResourceKind.isResource(fileExtension) else { return nil }
+        switch fileExtension {
+        case ResourceKind.storyboard.fileExtension: self = .storyboard
+        case ResourceKind.strings.fileExtension: self = .strings
+        case ResourceKind.xib.fileExtension: self = .xib
+        default: return nil
+        }
+    }
+    
     // MARK:- Static properties
     
     public static let validExtensions: [String] = [

@@ -38,7 +38,7 @@ class ProjectsListViewController: NSViewController {
         openPanel.allowedFileTypes = ["xcodeproj"]
         openPanel.beginSheetModal(for: view.window!) { [weak self, weak openPanel] response in
             guard response == NSFileHandlingPanelOKButton else { return }
-            guard let ss = self, let op = openPanel, let url = op.directoryURL else { return }
+            guard let ss = self, let op = openPanel, let url = op.urls.first else { return }
             ss.viewModel.addProject(from: url)
         }
     }

@@ -13,7 +13,7 @@ class ProjectViewModel {
     // MARK:- Properties
     
     let name: String
-    let path: String
+    let path: URL
     let kind: ProjectKind
     let resources: [ResourceViewModel]
     

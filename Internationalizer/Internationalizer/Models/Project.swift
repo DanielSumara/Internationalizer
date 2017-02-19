@@ -13,7 +13,7 @@ public struct Project {
     // MARK:- Properties
     
     public let name: String
-    public let path: String
+    public let path: URL
     public let kind: ProjectKind
     public let resources: [Resource]
     

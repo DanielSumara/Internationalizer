@@ -13,7 +13,7 @@ public struct Resource {
     // MARK:- Properties
     
     let name: String
-    let path: String
+    let paths: [URL]
     let kind: ResourceKind
     
 }
