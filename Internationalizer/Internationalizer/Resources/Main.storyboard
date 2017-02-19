@@ -671,6 +671,10 @@
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="609" y="428" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <toolbar key="toolbar" implicitIdentifier="925C15F2-1DE6-46A5-A80F-8EA5B754A800" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="regular" id="xqo-4G-mmy">
+                            <allowedToolbarItems/>
+                            <defaultToolbarItems/>
+                        </toolbar>
                     </window>
                     <connections>
                         <segue destination="aNW-iw-VWq" kind="relationship" relationship="window.shadowedContentViewController" id="hSN-7J-pae"/>
@@ -709,6 +713,9 @@
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="addNewResourcesTapped:" target="aNW-iw-VWq" id="1mP-Ta-UQG"/>
+                                            </connections>
                                         </button>
                                         <searchField wantsLayer="YES" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wLV-gr-W2c">
                                             <rect key="frame" x="30" y="4" width="412" height="22"/>

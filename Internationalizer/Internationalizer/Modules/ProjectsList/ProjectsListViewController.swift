@@ -27,6 +27,20 @@ class ProjectsListViewController: NSViewController {
         outlineView.expandItem(nil, expandChildren: true)
     }
     
+    // MARK:- @IBActions
+    
+    @IBAction func addNewResourcesTapped(_ sender: NSButton) {
+        let openPanel = NSOpenPanel()
+        openPanel.title = "Choose xCode project"
+        openPanel.allowsMultipleSelection = false
+        openPanel.canChooseDirectories = false
+        openPanel.canChooseFiles = true
+        openPanel.allowedFileTypes = ["xcodeproj"]
+        openPanel.beginSheetModal(for: view.window!) { (response) in
+            
+        }
+    }
+    
 }
 
 extension ProjectsListViewController {
