@@ -12,12 +12,12 @@ public class ProjectsRepository {
     
     // MARK:- Properties
     
-    public var projects: [Project] { get { return getProjects() } }
+    public private(set) var projects: [Project]
     
     // MARK:- Lifecycle
     
     public init() {
-        
+        projects = ProjectsRepository.getFakeProjects()
     }
     
     // MARK:- API
@@ -33,7 +33,8 @@ public class ProjectsRepository {
 
         let builder = ProjectBuilder(for: projectUrl)
         resourcePaths.forEach { builder.add(path: $0) }
-        builder.build()
+        projects.append(builder.build())
+        
         return .success
     }
     
@@ -41,7 +42,7 @@ public class ProjectsRepository {
 
 extension ProjectsRepository {
     
-    fileprivate func getProjects() -> [Project] {
+    fileprivate static func getFakeProjects() -> [Project] {
         let r1 = Resource(name: "Main", paths: [], kind: .storyboard)
         let r2 = Resource(name: "Internationalization", paths: [], kind: .strings)
         let r3 = Resource(name: "ViewController", paths: [], kind: .xib)
