@@ -51,5 +51,8 @@ func ==(lhs: ResourceViewModel, rhs: ResourceViewModel) -> Bool {
 }
 
 func <(lhs: ResourceViewModel, rhs: ResourceViewModel) -> Bool {
+    if lhs.kind.order == rhs.kind.order {
+        return lhs.name < rhs.name
+    }
     return lhs.kind.order < rhs.kind.order
 }
