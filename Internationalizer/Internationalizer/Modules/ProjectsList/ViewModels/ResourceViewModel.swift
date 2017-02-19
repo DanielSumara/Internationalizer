@@ -41,3 +41,15 @@ extension ResourceViewModel: NavigatorItem {
     }
     
 }
+
+extension ResourceViewModel: Comparable {
+    
+}
+
+func ==(lhs: ResourceViewModel, rhs: ResourceViewModel) -> Bool {
+    return lhs.name == rhs.name
+}
+
+func <(lhs: ResourceViewModel, rhs: ResourceViewModel) -> Bool {
+    return lhs.kind.order < rhs.kind.order
+}

@@ -10,6 +10,6 @@ import Foundation
 
 protocol ProjectsListView: MvvmView {
     
-    func insertNewItem()
+    func insert(project: ProjectViewModel, at index: Int)
     
 }

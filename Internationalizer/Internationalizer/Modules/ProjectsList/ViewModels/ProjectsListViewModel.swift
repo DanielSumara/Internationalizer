@@ -23,7 +23,7 @@ class ProjectsListViewModel {
     init(from repository: ProjectsRepository) {
         self.repository = repository
         
-        dataSource = repository.projects.map { ProjectViewModel(from: $0) }
+        dataSource = repository.projects.map { ProjectViewModel(from: $0) }.sorted()
     }
     
 }
@@ -36,11 +36,15 @@ extension ProjectsListViewModel: OutlineDataContext {
     
     func addProject(from url: URL) {
         switch repository.addProject(from: url) {
-        case .success: dataSource = repository.projects.map { ProjectViewModel(from: $0) }
-        case .failure(let error): print(error); break // TODO: - Handler error
+        case .success(let newItem):
+            let newVM = ProjectViewModel(from: newItem)
+            dataSource.append(newVM)
+            dataSource.sort()
+            if let index = dataSource.index(of: newVM) {
+                view?.insert(project: newVM, at: index)
+            }
+        case .failure(let error): print("Shit happens: \(error)"); break // TODO: - Handler error
         }
-        
-        view?.insertNewItem()
     }
     
 }

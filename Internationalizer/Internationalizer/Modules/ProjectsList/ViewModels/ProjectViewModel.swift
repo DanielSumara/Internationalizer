@@ -27,7 +27,7 @@ class ProjectViewModel {
         name = project.name
         path = project.path
         kind = project.kind
-        resources = project.resources.map { ResourceViewModel(from: $0) }
+        resources = project.resources.map { ResourceViewModel(from: $0) }.sorted()
     }
     
 }
@@ -49,4 +49,16 @@ extension ProjectViewModel: NavigatorItem {
         }
     }
     
+}
+
+extension ProjectViewModel: Comparable {
+    
+}
+
+func ==(lhs: ProjectViewModel, rhs: ProjectViewModel) -> Bool {
+    return lhs.name == rhs.name
+}
+
+func <(lhs: ProjectViewModel, rhs: ProjectViewModel) -> Bool {
+    return lhs.name < rhs.name
 }

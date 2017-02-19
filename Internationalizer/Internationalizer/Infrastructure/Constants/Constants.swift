@@ -1,5 +1,5 @@
 //
-//  OperationResult.swift
+//  Constants.swift
 //  Internationalizer
 //
 //  Created by Daniel Sumara on 19.02.2017.
@@ -8,9 +8,12 @@
 
 import Foundation
 
-public enum OperationResult<ResultType> {
+public enum Constants {
     
-    case success(data: ResultType)
-    case failure(with: Error)
+    public enum Animations {
+        
+        public static let duration: TimeInterval = 0.35
+        
+    }
     
 }

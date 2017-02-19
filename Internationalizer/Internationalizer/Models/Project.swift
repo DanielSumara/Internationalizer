@@ -19,3 +19,16 @@ public struct Project {
     
 }
 
+extension Project: Hashable {
+    
+    public var hashValue: Int { return path.hashValue }
+    
+}
+
+extension Project: Equatable {
+    
+}
+
+public func ==(lhs: Project, rhs: Project) -> Bool {
+    return lhs.path == rhs.path
+}

@@ -46,6 +46,14 @@ public enum ResourceKind {
         }
     }
     
+    public var order: Int {
+        switch self {
+        case .storyboard: return 0
+        case .xib: return 1
+        case .strings: return 2
+        }
+    }
+    
     // MARK:- API
     
     public static func isResource(_ fileExtension: String) -> Bool {

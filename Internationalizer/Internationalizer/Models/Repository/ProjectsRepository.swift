@@ -12,17 +12,18 @@ public class ProjectsRepository {
     
     // MARK:- Properties
     
-    public private(set) var projects: [Project]
+    public var projects: [Project] { return Array(projectsSet) }
+    private var projectsSet: Set<Project> 
     
     // MARK:- Lifecycle
     
     public init() {
-        projects = ProjectsRepository.getFakeProjects()
+        projectsSet = Set(ProjectsRepository.getFakeProjects())
     }
     
     // MARK:- API
     
-    public func addProject(from projectUrl: URL) -> OperationResult {
+    public func addProject(from projectUrl: URL) -> OperationResult<Project> {
         // TODO:- Create valid error object
         let url = projectUrl.deletingLastPathComponent()
         guard let iterator = FileManager.default.enumerator(at: url, includingPropertiesForKeys: nil) else { return .failure(with: NSError()) }
@@ -33,9 +34,15 @@ public class ProjectsRepository {
 
         let builder = ProjectBuilder(for: projectUrl)
         resourcePaths.forEach { builder.add(path: $0) }
-        projects.append(builder.build())
         
-        return .success
+        let project = builder.build()
+        
+        // TODO: - Create valid error object
+        guard !projectsSet.contains(project) else { return .failure(with: NSError(domain: "", code: -1, userInfo: nil)) }
+        
+        projectsSet.insert(project)
+        
+        return .success(data: project)
     }
     
 }
@@ -48,20 +55,20 @@ extension ProjectsRepository {
         let r3 = Resource(name: "ViewController", paths: [], kind: .xib)
         let r4 = Resource(name: "View", paths: [], kind: .xib)
         
-        let p1 = Project(name: "Applicator", path: URL(fileURLWithPath: ""), kind: .application, resources: [r1, r2, r3, r4])
+        let p1 = Project(name: "Applicator", path: URL(fileURLWithPath: "1"), kind: .application, resources: [r1, r2, r3, r4])
         
         let r5 = Resource(name: "Orders", paths: [], kind: .storyboard)
         let r6 = Resource(name: "OrderTypeDescriptions", paths: [], kind: .strings)
         
-        let p2 = Project(name: "OrdersModule", path: URL(fileURLWithPath: ""), kind: .framework, resources: [r5, r6])
+        let p2 = Project(name: "OrdersModule", path: URL(fileURLWithPath: "2"), kind: .framework, resources: [r5, r6])
         
         let r7 = Resource(name: "Reports", paths: [], kind: .storyboard)
         let r8 = Resource(name: "Reports", paths: [], kind: .strings)
         let r9 = Resource(name: "ReportTypeDescriptions", paths: [], kind: .strings)
         
-        let p3 = Project(name: "Reports", path: URL(fileURLWithPath: ""), kind: .framework, resources: [r7, r8, r9])
+        let p3 = Project(name: "Reports", path: URL(fileURLWithPath: "3"), kind: .framework, resources: [r7, r8, r9])
         
-        let p4 = Project(name: "Project w/o resources", path: URL(fileURLWithPath: ""), kind: .framework, resources: [])
+        let p4 = Project(name: "Project w/o resources", path: URL(fileURLWithPath: "4"), kind: .framework, resources: [])
         
         return [
             p1,

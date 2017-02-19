@@ -58,8 +58,12 @@ extension ProjectsListViewController: ProjectsListView {
         outlineView.reloadData()
     }
     
-    func insertNewItem() {
-        outlineView.insertItems(at: IndexSet(integer: 4), inParent: nil, withAnimation: .slideDown)
+    func insert(project: ProjectViewModel, at index: Int) {
+        outlineView.insertItems(at: IndexSet(integer: index), inParent: nil, withAnimation: .slideDown)
+        DispatchQueue.main.async { [weak self] in
+            guard let ss = self else { return }
+            ss.outlineView.expandItem(project)
+        }
     }
     
 }
