@@ -669,7 +669,7 @@
                     <window key="window" title="Internationalizer" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" fullSizeContentView="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="609" y="428" width="480" height="270"/>
+                        <rect key="contentRect" x="680" y="380" width="495" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                         <toolbar key="toolbar" implicitIdentifier="925C15F2-1DE6-46A5-A80F-8EA5B754A800" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="regular" id="xqo-4G-mmy">
                             <allowedToolbarItems/>
@@ -677,12 +677,61 @@
                         </toolbar>
                     </window>
                     <connections>
-                        <segue destination="aNW-iw-VWq" kind="relationship" relationship="window.shadowedContentViewController" id="hSN-7J-pae"/>
+                        <segue destination="G6Z-1p-wb0" kind="relationship" relationship="window.shadowedContentViewController" id="Z45-90-AVl"/>
                     </connections>
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="250"/>
+        </scene>
+        <!--Internationalizer Views Controller-->
+        <scene sceneID="Pvl-SZ-ifz">
+            <objects>
+                <splitViewController id="G6Z-1p-wb0" customClass="InternationalizerViewsController" customModule="Internationalizer" customModuleProvider="target" sceneMemberID="viewController">
+                    <splitViewItems>
+                        <splitViewItem holdingPriority="255" behavior="contentList" id="nQL-up-O3w"/>
+                        <splitViewItem id="2LR-1O-0i3"/>
+                    </splitViewItems>
+                    <splitView key="splitView" dividerStyle="thin" vertical="YES" id="laD-K0-tGy">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </splitView>
+                    <connections>
+                        <segue destination="aNW-iw-VWq" kind="relationship" relationship="splitItems" id="G7u-eL-02g"/>
+                        <segue destination="EuH-dm-lE5" kind="relationship" relationship="splitItems" id="hCw-V2-L2J"/>
+                    </connections>
+                </splitViewController>
+                <customObject id="8cZ-z6-Rd6" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75" y="731"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="wOi-M5-hcW">
+            <objects>
+                <viewController id="EuH-dm-lE5" sceneMemberID="viewController">
+                    <view key="view" id="4ts-Ef-MHM">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wLE-nR-Cfq">
+                                <rect key="frame" x="6" y="141" width="438" height="17"/>
+                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="Select resource from list" id="Nxi-tr-Pzg">
+                                    <font key="font" metaFont="message"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="wLE-nR-Cfq" secondAttribute="trailing" constant="8" id="Ymm-A5-hjA"/>
+                            <constraint firstItem="wLE-nR-Cfq" firstAttribute="leading" secondItem="4ts-Ef-MHM" secondAttribute="leading" constant="8" id="hEc-od-2HS"/>
+                            <constraint firstItem="wLE-nR-Cfq" firstAttribute="centerY" secondItem="4ts-Ef-MHM" secondAttribute="centerY" id="tFU-O7-Doe"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <customObject id="7Vd-MN-OW5" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="590" y="1210"/>
         </scene>
         <!--Projects List View Controller-->
         <scene sceneID="0AR-Ru-Zgq">
@@ -741,6 +790,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="atu-a5-rO4"/>
                                 </constraints>
+                                <font key="titleFont" metaFont="message" size="11"/>
                             </box>
                             <scrollView wantsLayer="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4hg-G6-lcR">
                                 <rect key="frame" x="0.0" y="30" width="450" height="270"/>
@@ -832,7 +882,7 @@
                 </viewController>
                 <customObject id="IF9-v7-S01" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="788"/>
+            <point key="canvasLocation" x="-67" y="1210"/>
         </scene>
     </scenes>
     <resources>

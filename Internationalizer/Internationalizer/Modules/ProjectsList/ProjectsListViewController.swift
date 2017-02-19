@@ -16,7 +16,7 @@ class ProjectsListViewController: NSViewController {
     
     // MARK:- Properties
     
-    var viewModel: ProjectsListViewModel! = ProjectsListViewModel() { didSet { reload() } }
+    var viewModel: ProjectsListViewModel! { didSet { reload() } }
     
     // MARK:- Lifecycle
     
@@ -36,8 +36,10 @@ class ProjectsListViewController: NSViewController {
         openPanel.canChooseDirectories = false
         openPanel.canChooseFiles = true
         openPanel.allowedFileTypes = ["xcodeproj"]
-        openPanel.beginSheetModal(for: view.window!) { (response) in
-            
+        openPanel.beginSheetModal(for: view.window!) { [weak self, weak openPanel] response in
+            guard response == NSFileHandlingPanelOKButton else { return }
+            guard let ss = self, let op = openPanel, let url = op.directoryURL else { return }
+            ss.viewModel.addProject(from: url)
         }
     }
     
@@ -46,7 +48,7 @@ class ProjectsListViewController: NSViewController {
 extension ProjectsListViewController {
     
     func reload() {
-        guard isViewLoaded else { return }
+        guard viewModel != nil else { return }
         
         outlineView.reloadData()
     }
@@ -56,6 +58,7 @@ extension ProjectsListViewController {
 extension ProjectsListViewController: NSOutlineViewDataSource {
     
     func outlineView(_ outlineView: NSOutlineView, numberOfChildrenOfItem item: Any?) -> Int {
+        guard viewModel != nil else { return 0 }
         guard let item = item else { return viewModel.numberOfChilds }
         guard let dataContext = item as? OutlineDataContext else { return 0 }
         return dataContext.numberOfChilds

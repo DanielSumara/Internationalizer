@@ -14,35 +14,14 @@ class ProjectsListViewModel {
     
     fileprivate let dataSource: [ProjectViewModel]
     
+    fileprivate let repository: ProjectsRepository
+    
     // MARK:- Lifecycle
     
-    init() {
-        let r1 = Resource(name: "Main", path: "", kind: .storyboard)
-        let r2 = Resource(name: "Internationalization", path: "", kind: .strings)
-        let r3 = Resource(name: "ViewController", path: "", kind: .xib)
-        let r4 = Resource(name: "View", path: "", kind: .xib)
+    init(from repository: ProjectsRepository) {
+        self.repository = repository
         
-        let p1 = Project(name: "Project1", path: "", kind: .application, resources: [r1, r2, r3, r4])
-        
-        let r5 = Resource(name: "Orders", path: "", kind: .storyboard)
-        let r6 = Resource(name: "OrderTypeDescriptions", path: "", kind: .strings)
-        
-        let p2 = Project(name: "Framework1", path: "", kind: .framework, resources: [r5, r6])
-        
-        let r7 = Resource(name: "Reports", path: "", kind: .storyboard)
-        let r8 = Resource(name: "Reports", path: "", kind: .strings)
-        let r9 = Resource(name: "ReportTypeDescriptions", path: "", kind: .strings)
-        
-        let p3 = Project(name: "Reports", path: "", kind: .framework, resources: [r7, r8, r9])
-        
-        let p4 = Project(name: "Project w/o resources", path: "", kind: .framework, resources: [])
-        
-        dataSource = [
-            ProjectViewModel(from: p1),
-            ProjectViewModel(from: p2),
-            ProjectViewModel(from: p3),
-            ProjectViewModel(from: p4)
-        ]
+        dataSource = repository.projects.map { ProjectViewModel(from: $0) }
     }
     
 }
@@ -52,5 +31,9 @@ extension ProjectsListViewModel: OutlineDataContext {
     var numberOfChilds: Int { return dataSource.count }
     
     func child(at index: Int) -> Any { return dataSource[index] }
+    
+    func addProject(from url: URL) {
+        repository.addProject(from: url)
+    }
     
 }
