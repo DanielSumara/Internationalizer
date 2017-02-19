@@ -10,7 +10,7 @@ import Foundation
 
 protocol Coordinator {
     
-    func showDetails(for resource: NSObject)
+    func showDetails(for resource: Resource)
     func showLackOfSelection()
     
 }

@@ -54,12 +54,12 @@ extension ProjectsListViewModel {
     }
 
     func showDetails(for item: Any?) {
-        guard let item = item else {
+        guard let item = item as? ResourceViewModel else {
             coordinator.showLackOfSelection()
             return
         }
         
-        coordinator.showDetails(for: NSObject())
+        coordinator.showDetails(for: item.model)
     }
     
 }

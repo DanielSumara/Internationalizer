@@ -42,6 +42,12 @@ extension ResourceViewModel: NavigatorItem {
     
 }
 
+extension ResourceViewModel {
+    
+    var model: Resource { return resource }
+    
+}
+
 extension ResourceViewModel: Comparable {
     
 }

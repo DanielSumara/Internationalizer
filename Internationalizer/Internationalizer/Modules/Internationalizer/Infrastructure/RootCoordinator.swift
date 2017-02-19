@@ -34,7 +34,7 @@ class RootCoordinator {
 
 extension RootCoordinator: Coordinator {
    
-    func showDetails(for resource: NSObject) {
+    func showDetails(for resource: Resource) {
         details.showDetails(for: resource)
     }
     

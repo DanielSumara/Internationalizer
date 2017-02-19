@@ -12,14 +12,17 @@ class ResourceDetailsViewController: NSTabViewController {
  
     // MARK:- Properties
     
+    weak var lackOfSelection: NSViewController!
+    weak var stringsGrid: StringsGridViewController!
+    
     // MARK:- Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        transitionOptions = .slideLeft
+        lackOfSelection = tabViewItems[ViewControllerIndexFor.lackOfSelection].viewController
+        stringsGrid = tabViewItems[ViewControllerIndexFor.stringsGrid].viewController as! StringsGridViewController
     }
-    
     
 }
 
@@ -33,8 +36,14 @@ extension ResourceDetailsViewController: ResourceDetailsView {
         selectedTabViewItemIndex = ViewControllerIndexFor.lackOfSelection
     }
     
-    func showDetails(for resource: NSObject) {
-        selectedTabViewItemIndex = ViewControllerIndexFor.stringsGrid
+    func showDetails(for resource: Resource) {
+        switch resource.kind {
+        case .storyboard: selectedTabViewItemIndex = 0
+        case .strings:
+            stringsGrid.pathControl.url = resource.paths.first
+            selectedTabViewItemIndex = ViewControllerIndexFor.stringsGrid
+        case .xib: selectedTabViewItemIndex = 0
+        }
     }
     
 }
