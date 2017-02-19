@@ -16,7 +16,12 @@ class ProjectsListViewController: NSViewController {
     
     // MARK:- Properties
     
-    var viewModel: ProjectsListViewModel! { didSet { reload() } }
+    var viewModel: ProjectsListViewModel! {
+        didSet {
+            viewModel.view = self
+            reload()
+        }
+    }
     
     // MARK:- Lifecycle
     
@@ -45,12 +50,16 @@ class ProjectsListViewController: NSViewController {
     
 }
 
-extension ProjectsListViewController {
+extension ProjectsListViewController: ProjectsListView {
     
     func reload() {
         guard viewModel != nil else { return }
         
         outlineView.reloadData()
+    }
+    
+    func insertNewItem() {
+        outlineView.insertItems(at: IndexSet(integer: 4), inParent: nil, withAnimation: .slideDown)
     }
     
 }

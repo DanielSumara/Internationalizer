@@ -47,8 +47,14 @@ class ProjectBuilder {
     }
     
     func build() -> Project {
+        var resourceItems: [Resource] = []
         
-        return Project(name: projectName, path: projectPath, kind: projectKind, resources: [])
+        for resource in resources {
+            guard let paths = resourcesPaths[resource.key] else { continue }
+            resourceItems.append(Resource(name: resource.key, paths: paths, kind: resource.value))
+        }
+        
+        return Project(name: projectName, path: projectPath, kind: projectKind, resources: resourceItems)
     }
     
 }

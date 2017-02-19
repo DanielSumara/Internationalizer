@@ -12,7 +12,9 @@ class ProjectsListViewModel {
     
     // MARK:- Properties
     
-    fileprivate let dataSource: [ProjectViewModel]
+    weak var view: ProjectsListView? 
+    
+    fileprivate var dataSource: [ProjectViewModel]
     
     fileprivate let repository: ProjectsRepository
     
@@ -33,7 +35,12 @@ extension ProjectsListViewModel: OutlineDataContext {
     func child(at index: Int) -> Any { return dataSource[index] }
     
     func addProject(from url: URL) {
-        repository.addProject(from: url)
+        switch repository.addProject(from: url) {
+        case .success: dataSource = repository.projects.map { ProjectViewModel(from: $0) }
+        case .failure(let error): print(error); break // TODO: - Handler error
+        }
+        
+        view?.insertNewItem()
     }
     
 }
