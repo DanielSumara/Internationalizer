@@ -19,6 +19,10 @@
 		09377B041E59FF0500BE52EE /* MvvmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09377B031E59FF0500BE52EE /* MvvmView.swift */; };
 		09377B061E5A009200BE52EE /* ProjectsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09377B051E5A009200BE52EE /* ProjectsListView.swift */; };
 		09377B091E5A064700BE52EE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09377B081E5A064700BE52EE /* Constants.swift */; };
+		09377B0D1E5A34AB00BE52EE /* ResourceDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09377B0C1E5A34AB00BE52EE /* ResourceDetailsViewController.swift */; };
+		09377B101E5A376900BE52EE /* ResourceDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09377B0F1E5A376900BE52EE /* ResourceDetailsView.swift */; };
+		09377B131E5A386C00BE52EE /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09377B121E5A386C00BE52EE /* RootCoordinator.swift */; };
+		09377B161E5A3BCC00BE52EE /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09377B151E5A3BCC00BE52EE /* Coordinator.swift */; };
 		098A2E231E59BB8B00BD26CB /* ProjectsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098A2E221E59BB8B00BD26CB /* ProjectsRepository.swift */; };
 		098A2E261E59CB8100BD26CB /* InternationalizerViewsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098A2E251E59CB8100BD26CB /* InternationalizerViewsController.swift */; };
 		098A2E291E59D94C00BD26CB /* OperationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098A2E281E59D94C00BD26CB /* OperationResult.swift */; };
@@ -59,6 +63,10 @@
 		09377B031E59FF0500BE52EE /* MvvmView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MvvmView.swift; sourceTree = "<group>"; };
 		09377B051E5A009200BE52EE /* ProjectsListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsListView.swift; sourceTree = "<group>"; };
 		09377B081E5A064700BE52EE /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		09377B0C1E5A34AB00BE52EE /* ResourceDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourceDetailsViewController.swift; sourceTree = "<group>"; };
+		09377B0F1E5A376900BE52EE /* ResourceDetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourceDetailsView.swift; sourceTree = "<group>"; };
+		09377B121E5A386C00BE52EE /* RootCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
+		09377B151E5A3BCC00BE52EE /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		098A2E221E59BB8B00BD26CB /* ProjectsRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsRepository.swift; sourceTree = "<group>"; };
 		098A2E251E59CB8100BD26CB /* InternationalizerViewsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InternationalizerViewsController.swift; sourceTree = "<group>"; };
 		098A2E281E59D94C00BD26CB /* OperationResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationResult.swift; sourceTree = "<group>"; };
@@ -171,6 +179,7 @@
 			children = (
 				098A2E241E59CB2A00BD26CB /* Internationalizer */,
 				091B3BD71E54F4DF0033A6E7 /* ProjectsList */,
+				09377B0B1E5A348400BE52EE /* ResourceDetails */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -214,6 +223,39 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		09377B0B1E5A348400BE52EE /* ResourceDetails */ = {
+			isa = PBXGroup;
+			children = (
+				09377B0C1E5A34AB00BE52EE /* ResourceDetailsViewController.swift */,
+				09377B0E1E5A374700BE52EE /* Contracts */,
+			);
+			path = ResourceDetails;
+			sourceTree = "<group>";
+		};
+		09377B0E1E5A374700BE52EE /* Contracts */ = {
+			isa = PBXGroup;
+			children = (
+				09377B0F1E5A376900BE52EE /* ResourceDetailsView.swift */,
+			);
+			path = Contracts;
+			sourceTree = "<group>";
+		};
+		09377B111E5A384800BE52EE /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				09377B121E5A386C00BE52EE /* RootCoordinator.swift */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		09377B141E5A3BB900BE52EE /* Contracts */ = {
+			isa = PBXGroup;
+			children = (
+				09377B151E5A3BCC00BE52EE /* Coordinator.swift */,
+			);
+			path = Contracts;
+			sourceTree = "<group>";
+		};
 		098A2E211E59BB6300BD26CB /* Repository */ = {
 			isa = PBXGroup;
 			children = (
@@ -227,6 +269,8 @@
 			isa = PBXGroup;
 			children = (
 				098A2E251E59CB8100BD26CB /* InternationalizerViewsController.swift */,
+				09377B141E5A3BB900BE52EE /* Contracts */,
+				09377B111E5A384800BE52EE /* Infrastructure */,
 			);
 			path = Internationalizer;
 			sourceTree = "<group>";
@@ -388,6 +432,8 @@
 				091B3BD51E54F4210033A6E7 /* TableCellView.swift in Sources */,
 				09CD18C21E56534200CA7C41 /* ResourceKind.swift in Sources */,
 				091B3BAF1E54DD6B0033A6E7 /* AppDelegate.swift in Sources */,
+				09377B161E5A3BCC00BE52EE /* Coordinator.swift in Sources */,
+				09377B101E5A376900BE52EE /* ResourceDetailsView.swift in Sources */,
 				091B3BDE1E54F6D00033A6E7 /* Resource.swift in Sources */,
 				09377B061E5A009200BE52EE /* ProjectsListView.swift in Sources */,
 				091B3BE11E54FE330033A6E7 /* ProjectsListViewModel.swift in Sources */,
@@ -396,9 +442,11 @@
 				098A2E261E59CB8100BD26CB /* InternationalizerViewsController.swift in Sources */,
 				09CD18C61E56557B00CA7C41 /* OutlineDataContext.swift in Sources */,
 				09377B091E5A064700BE52EE /* Constants.swift in Sources */,
+				09377B131E5A386C00BE52EE /* RootCoordinator.swift in Sources */,
 				09F6A0F81E59EFBF0049E16E /* ProjectBuilder.swift in Sources */,
 				098A2E231E59BB8B00BD26CB /* ProjectsRepository.swift in Sources */,
 				09CD18CB1E565E6300CA7C41 /* NavigatorItem.swift in Sources */,
+				09377B0D1E5A34AB00BE52EE /* ResourceDetailsViewController.swift in Sources */,
 				091B3BDC1E54F6410033A6E7 /* Project.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

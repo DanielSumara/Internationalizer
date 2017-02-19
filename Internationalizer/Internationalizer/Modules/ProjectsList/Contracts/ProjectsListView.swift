@@ -10,6 +10,12 @@ import Foundation
 
 protocol ProjectsListView: MvvmView {
     
+    // MARK:- Properties
+    
+    var viewModel: ProjectsListViewModel! { get set }
+    
+    // MARK:- API
+    
     func insert(project: ProjectViewModel, at index: Int)
     
 }

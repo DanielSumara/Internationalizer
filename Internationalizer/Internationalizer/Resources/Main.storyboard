@@ -690,7 +690,7 @@
                 <splitViewController id="G6Z-1p-wb0" customClass="InternationalizerViewsController" customModule="Internationalizer" customModuleProvider="target" sceneMemberID="viewController">
                     <splitViewItems>
                         <splitViewItem holdingPriority="255" behavior="contentList" id="nQL-up-O3w"/>
-                        <splitViewItem id="2LR-1O-0i3"/>
+                        <splitViewItem id="QLe-on-4TD"/>
                     </splitViewItems>
                     <splitView key="splitView" dividerStyle="thin" vertical="YES" id="laD-K0-tGy">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
@@ -698,17 +698,38 @@
                     </splitView>
                     <connections>
                         <segue destination="aNW-iw-VWq" kind="relationship" relationship="splitItems" id="G7u-eL-02g"/>
-                        <segue destination="EuH-dm-lE5" kind="relationship" relationship="splitItems" id="hCw-V2-L2J"/>
+                        <segue destination="OdH-HR-iiz" kind="relationship" relationship="splitItems" id="cgN-oQ-0w4"/>
                     </connections>
                 </splitViewController>
                 <customObject id="8cZ-z6-Rd6" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="731"/>
         </scene>
-        <!--View Controller-->
+        <!--Item details-->
+        <scene sceneID="MG6-U6-Eb8">
+            <objects>
+                <tabViewController title="Item details" selectedTabViewItemIndex="0" tabStyle="unspecified" id="OdH-HR-iiz" customClass="ResourceDetailsViewController" customModule="Internationalizer" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabViewItems>
+                        <tabViewItem id="srE-7S-Pyg"/>
+                    </tabViewItems>
+                    <tabView key="tabView" type="noTabsNoBorder" id="Twu-Pu-0y8">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <font key="font" metaFont="message"/>
+                        <tabViewItems/>
+                    </tabView>
+                    <connections>
+                        <segue destination="EuH-dm-lE5" kind="relationship" relationship="tabItems" id="tQp-wL-mIE"/>
+                    </connections>
+                </tabViewController>
+                <customObject id="4Vz-7a-eBQ" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="660" y="731"/>
+        </scene>
+        <!--Lack of selected item-->
         <scene sceneID="wOi-M5-hcW">
             <objects>
-                <viewController id="EuH-dm-lE5" sceneMemberID="viewController">
+                <viewController title="Lack of selected item" id="EuH-dm-lE5" sceneMemberID="viewController">
                     <view key="view" id="4ts-Ef-MHM">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -731,7 +752,7 @@
                 </viewController>
                 <customObject id="7Vd-MN-OW5" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="590" y="1210"/>
+            <point key="canvasLocation" x="660" y="1187"/>
         </scene>
         <!--Projects List View Controller-->
         <scene sceneID="0AR-Ru-Zgq">
@@ -790,7 +811,6 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="atu-a5-rO4"/>
                                 </constraints>
-                                <font key="titleFont" metaFont="message" size="11"/>
                             </box>
                             <scrollView wantsLayer="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4hg-G6-lcR">
                                 <rect key="frame" x="0.0" y="30" width="450" height="270"/>

@@ -17,10 +17,12 @@ class ProjectsListViewModel {
     fileprivate var dataSource: [ProjectViewModel]
     
     fileprivate let repository: ProjectsRepository
+    fileprivate let coordinator: Coordinator
     
     // MARK:- Lifecycle
     
-    init(from repository: ProjectsRepository) {
+    init(from repository: ProjectsRepository, with coordinator: Coordinator) {
+        self.coordinator = coordinator
         self.repository = repository
         
         dataSource = repository.projects.map { ProjectViewModel(from: $0) }.sorted()
