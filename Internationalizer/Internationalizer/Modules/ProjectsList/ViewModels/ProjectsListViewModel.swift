@@ -36,6 +36,10 @@ extension ProjectsListViewModel: OutlineDataContext {
     
     func child(at index: Int) -> Any { return dataSource[index] }
     
+}
+
+extension ProjectsListViewModel {
+    
     func addProject(from url: URL) {
         switch repository.addProject(from: url) {
         case .success(let newItem):
@@ -47,6 +51,15 @@ extension ProjectsListViewModel: OutlineDataContext {
             }
         case .failure(let error): print("Shit happens: \(error)"); break // TODO: - Handler error
         }
+    }
+
+    func showDetails(for item: Any?) {
+        guard let item = item else {
+            coordinator.showLackOfSelection()
+            return
+        }
+        
+        coordinator.showDetails(for: NSObject())
     }
     
 }

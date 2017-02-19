@@ -11,7 +11,6 @@ import Foundation
 protocol ResourceDetailsView: MvvmView {
     
     func showLackOfSelection()
-    
-    
+    func showDetails(for resource: NSObject)
     
 }

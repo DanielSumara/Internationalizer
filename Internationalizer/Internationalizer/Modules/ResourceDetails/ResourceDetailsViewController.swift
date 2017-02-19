@@ -12,6 +12,13 @@ class ResourceDetailsViewController: NSTabViewController {
  
     // MARK:- Properties
     
+    // MARK:- Lifecycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        transitionOptions = .slideLeft
+    }
     
     
 }
@@ -24,6 +31,10 @@ extension ResourceDetailsViewController: ResourceDetailsView {
     
     func showLackOfSelection() {
         selectedTabViewItemIndex = ViewControllerIndexFor.lackOfSelection
+    }
+    
+    func showDetails(for resource: NSObject) {
+        selectedTabViewItemIndex = ViewControllerIndexFor.stringsGrid
     }
     
 }

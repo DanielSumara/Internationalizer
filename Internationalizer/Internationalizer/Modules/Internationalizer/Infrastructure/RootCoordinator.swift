@@ -35,7 +35,7 @@ class RootCoordinator {
 extension RootCoordinator: Coordinator {
    
     func showDetails(for resource: NSObject) {
-        
+        details.showDetails(for: resource)
     }
     
     func showLackOfSelection() {

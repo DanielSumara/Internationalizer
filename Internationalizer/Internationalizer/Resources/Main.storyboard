@@ -711,7 +711,9 @@
                 <tabViewController title="Item details" selectedTabViewItemIndex="0" tabStyle="unspecified" id="OdH-HR-iiz" customClass="ResourceDetailsViewController" customModule="Internationalizer" customModuleProvider="target" sceneMemberID="viewController">
                     <tabViewItems>
                         <tabViewItem id="srE-7S-Pyg"/>
+                        <tabViewItem id="3RM-kL-8f9"/>
                     </tabViewItems>
+                    <viewControllerTransitionOptions key="transitionOptions"/>
                     <tabView key="tabView" type="noTabsNoBorder" id="Twu-Pu-0y8">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -720,6 +722,7 @@
                     </tabView>
                     <connections>
                         <segue destination="EuH-dm-lE5" kind="relationship" relationship="tabItems" id="tQp-wL-mIE"/>
+                        <segue destination="C6Q-Ts-bAw" kind="relationship" relationship="tabItems" id="Rgf-ii-LTo"/>
                     </connections>
                 </tabViewController>
                 <customObject id="4Vz-7a-eBQ" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -753,6 +756,33 @@
                 <customObject id="7Vd-MN-OW5" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="660" y="1187"/>
+        </scene>
+        <!--StringsGrid-->
+        <scene sceneID="9tt-bX-3Xu">
+            <objects>
+                <viewController title="StringsGrid" id="C6Q-Ts-bAw" sceneMemberID="viewController">
+                    <view key="view" id="byw-yl-8ww">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JDS-uu-9bc">
+                                <rect key="frame" x="207" y="141" width="37" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="qwc-04-tNR">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="JDS-uu-9bc" firstAttribute="centerY" secondItem="byw-yl-8ww" secondAttribute="centerY" id="bDw-pk-cvU"/>
+                            <constraint firstItem="JDS-uu-9bc" firstAttribute="centerX" secondItem="byw-yl-8ww" secondAttribute="centerX" id="utq-fT-pfZ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <customObject id="hM8-vM-kxk" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1125" y="1187"/>
         </scene>
         <!--Projects List View Controller-->
         <scene sceneID="0AR-Ru-Zgq">

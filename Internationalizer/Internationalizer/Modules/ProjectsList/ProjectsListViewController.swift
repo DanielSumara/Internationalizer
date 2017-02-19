@@ -103,4 +103,9 @@ extension ProjectsListViewController: NSOutlineViewDelegate {
         return view
     }
     
+    func outlineViewSelectionDidChange(_ notification: Notification) {
+        guard let outlineView = notification.object as? NSOutlineView else { return }
+        viewModel.showDetails(for: outlineView.item(atRow: outlineView.selectedRow))
+    }
+    
 }
