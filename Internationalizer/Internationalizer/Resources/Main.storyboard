@@ -713,7 +713,7 @@
                         <tabViewItem id="srE-7S-Pyg"/>
                         <tabViewItem id="3RM-kL-8f9"/>
                     </tabViewItems>
-                    <viewControllerTransitionOptions key="transitionOptions"/>
+                    <viewControllerTransitionOptions key="transitionOptions" slideLeft="YES" allowUserInteraction="YES"/>
                     <tabView key="tabView" type="noTabsNoBorder" id="Twu-Pu-0y8">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -867,7 +867,7 @@
                                 <pathCell key="cell" controlSize="small" selectable="YES" editable="YES" alignment="left" id="4dv-3g-35c">
                                     <font key="font" metaFont="smallSystem"/>
                                     <url key="url" string="file://localhost/Applications/"/>
-                                    <color key="backgroundColor" red="0.8980392157" green="0.92549019610000005" blue="0.97254901959999995" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="backgroundColor" red="0.89803921568627454" green="0.92549019607843142" blue="0.97254901960784312" alpha="1" colorSpace="deviceRGB"/>
                                 </pathCell>
                             </pathControl>
                         </subviews>

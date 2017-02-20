@@ -54,10 +54,18 @@ public enum ResourceKind {
         }
     }
     
-    // MARK:- API
+    // MARK:- Static API
     
     public static func isResource(_ fileExtension: String) -> Bool {
         return ResourceKind.validExtensions.contains(fileExtension)
+    }
+    
+    // MARK:- API
+    
+    public mutating func promote(to newResourceKind: ResourceKind?) {
+        guard let newResourceKind = newResourceKind else { return }
+        guard newResourceKind != .strings else { return }
+        self = newResourceKind
     }
     
 }

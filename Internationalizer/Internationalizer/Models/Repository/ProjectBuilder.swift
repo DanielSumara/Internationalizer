@@ -39,6 +39,7 @@ class ProjectBuilder {
         let resourceName = resourceNameWithExtension.replacingOccurrences(of: ".\(fileExtension)", with: "")
         
         if var paths = resourcesPaths[resourceName] {
+            resources[resourceName]?.promote(to: ResourceKind(from: fileExtension))
             paths.append(url)
         } else {
             resources[resourceName] = ResourceKind(from: fileExtension)
