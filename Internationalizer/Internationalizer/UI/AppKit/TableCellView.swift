@@ -18,8 +18,8 @@ public extension TableCellView {
     
     public static var typeIdentifier: String { return String(describing: self) }
     
-    public static func dequeue<CellType: TableCellView>(from outlineView: NSOutlineView, for parent: NSViewController) -> CellType {
-        return outlineView.make(withIdentifier: typeIdentifier, owner: parent) as! CellType
+    public static func dequeue<CellType: TableCellView>(from tableView: NSTableView, for parent: NSViewController) -> CellType {
+        return tableView.make(withIdentifier: typeIdentifier, owner: parent) as! CellType
     }
     
 }

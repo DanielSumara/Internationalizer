@@ -12,9 +12,29 @@ class StringsGridViewController: NSViewController {
     
     // MARK:- @IBOutlets
     
-    @IBOutlet weak var pathControl: NSPathControl!
     @IBOutlet weak var tableView: NSTableView!
     
     // MARK:- Lifecicle
+    
+}
+
+extension StringsGridViewController: NSTableViewDataSource {
+    
+    func numberOfRows(in tableView: NSTableView) -> Int {
+        return 13
+    }
+    
+}
+
+extension StringsGridViewController: NSTableViewDelegate {
+    
+    func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
+        let cell = FieldCell.dequeue(from: tableView, for: self) as FieldCell
+        return cell
+    }
+    
+    func tableView(_ tableView: NSTableView, heightOfRow row: Int) -> CGFloat {
+        return 22
+    }
     
 }

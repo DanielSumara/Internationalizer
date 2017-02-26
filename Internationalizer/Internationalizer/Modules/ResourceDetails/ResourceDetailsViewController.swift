@@ -40,7 +40,6 @@ extension ResourceDetailsViewController: ResourceDetailsView {
         switch resource.kind {
         case .storyboard: selectedTabViewItemIndex = 0
         case .strings:
-            stringsGrid.pathControl.url = resource.paths.first
             selectedTabViewItemIndex = ViewControllerIndexFor.stringsGrid
         case .xib: selectedTabViewItemIndex = 0
         }
