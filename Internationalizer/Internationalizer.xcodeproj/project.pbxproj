@@ -34,6 +34,12 @@
 		09CD18C61E56557B00CA7C41 /* OutlineDataContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CD18C51E56557B00CA7C41 /* OutlineDataContext.swift */; };
 		09CD18C81E565CDB00CA7C41 /* R.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CD18C71E565CDB00CA7C41 /* R.swift */; };
 		09CD18CB1E565E6300CA7C41 /* NavigatorItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CD18CA1E565E6300CA7C41 /* NavigatorItem.swift */; };
+		09E5E8801E66146200BD44B5 /* StringsGridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E5E87F1E66146200BD44B5 /* StringsGridViewModel.swift */; };
+		09E5E8831E66167600BD44B5 /* StringsLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E5E8821E66167600BD44B5 /* StringsLine.swift */; };
+		09E5E8851E6616BC00BD44B5 /* StringsFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E5E8841E6616BC00BD44B5 /* StringsFile.swift */; };
+		09E5E8881E6618D000BD44B5 /* FileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E5E8871E6618D000BD44B5 /* FileReader.swift */; };
+		09E5E88B1E661CFB00BD44B5 /* StringsFileFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E5E88A1E661CFB00BD44B5 /* StringsFileFactory.swift */; };
+		09E5E88E1E662BCA00BD44B5 /* StringsGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E5E88D1E662BCA00BD44B5 /* StringsGridView.swift */; };
 		09EEB9AE1E5B5C2500827C9D /* FieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EEB9AD1E5B5C2500827C9D /* FieldCell.swift */; };
 		09F6A0F81E59EFBF0049E16E /* ProjectBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F6A0F71E59EFBF0049E16E /* ProjectBuilder.swift */; };
 /* End PBXBuildFile section */
@@ -80,6 +86,12 @@
 		09CD18C51E56557B00CA7C41 /* OutlineDataContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutlineDataContext.swift; sourceTree = "<group>"; };
 		09CD18C71E565CDB00CA7C41 /* R.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.swift; sourceTree = "<group>"; };
 		09CD18CA1E565E6300CA7C41 /* NavigatorItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigatorItem.swift; sourceTree = "<group>"; };
+		09E5E87F1E66146200BD44B5 /* StringsGridViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringsGridViewModel.swift; sourceTree = "<group>"; };
+		09E5E8821E66167600BD44B5 /* StringsLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringsLine.swift; sourceTree = "<group>"; };
+		09E5E8841E6616BC00BD44B5 /* StringsFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringsFile.swift; sourceTree = "<group>"; };
+		09E5E8871E6618D000BD44B5 /* FileReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileReader.swift; sourceTree = "<group>"; };
+		09E5E88A1E661CFB00BD44B5 /* StringsFileFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringsFileFactory.swift; sourceTree = "<group>"; };
+		09E5E88D1E662BCA00BD44B5 /* StringsGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringsGridView.swift; sourceTree = "<group>"; };
 		09EEB9AD1E5B5C2500827C9D /* FieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldCell.swift; sourceTree = "<group>"; };
 		09F6A0F71E59EFBF0049E16E /* ProjectBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -129,6 +141,7 @@
 				091B3BCB1E54DD8E0033A6E7 /* Resouarces */,
 				091B3BCE1E54DE420033A6E7 /* SupportFiles */,
 				091B3BD21E54F3D60033A6E7 /* UI */,
+				09E5E8861E6618A700BD44B5 /* Utilities */,
 			);
 			path = Internationalizer;
 			sourceTree = "<group>";
@@ -264,9 +277,10 @@
 		09377B171E5A49C500BE52EE /* Grids */ = {
 			isa = PBXGroup;
 			children = (
-				09EEB9AC1E5B5BE400827C9D /* UI */,
+				09E5E8811E6615C200BD44B5 /* Models */,
 				09377B191E5A49EE00BE52EE /* Storyboard */,
 				09377B181E5A49DB00BE52EE /* Strings */,
+				09EEB9AC1E5B5BE400827C9D /* UI */,
 				09377B1A1E5A4A0200BE52EE /* Xib */,
 			);
 			path = Grids;
@@ -276,6 +290,7 @@
 			isa = PBXGroup;
 			children = (
 				09377B1B1E5A4C8800BE52EE /* StringsGridViewController.swift */,
+				09E5E88C1E662BAE00BD44B5 /* Contracts */,
 				09EEB9AB1E5B598E00827C9D /* ViewModels */,
 			);
 			path = Strings;
@@ -359,9 +374,44 @@
 			path = Contracts;
 			sourceTree = "<group>";
 		};
+		09E5E8811E6615C200BD44B5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				09E5E8841E6616BC00BD44B5 /* StringsFile.swift */,
+				09E5E8821E66167600BD44B5 /* StringsLine.swift */,
+				09E5E8891E661CE100BD44B5 /* Factories */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		09E5E8861E6618A700BD44B5 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				09E5E8871E6618D000BD44B5 /* FileReader.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		09E5E8891E661CE100BD44B5 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				09E5E88A1E661CFB00BD44B5 /* StringsFileFactory.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		09E5E88C1E662BAE00BD44B5 /* Contracts */ = {
+			isa = PBXGroup;
+			children = (
+				09E5E88D1E662BCA00BD44B5 /* StringsGridView.swift */,
+			);
+			path = Contracts;
+			sourceTree = "<group>";
+		};
 		09EEB9AB1E5B598E00827C9D /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				09E5E87F1E66146200BD44B5 /* StringsGridViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -478,6 +528,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09E5E8881E6618D000BD44B5 /* FileReader.swift in Sources */,
 				09EEB9AE1E5B5C2500827C9D /* FieldCell.swift in Sources */,
 				098A2E291E59D94C00BD26CB /* OperationResult.swift in Sources */,
 				09CD18C81E565CDB00CA7C41 /* R.swift in Sources */,
@@ -488,6 +539,7 @@
 				09CD18C21E56534200CA7C41 /* ResourceKind.swift in Sources */,
 				091B3BAF1E54DD6B0033A6E7 /* AppDelegate.swift in Sources */,
 				09377B161E5A3BCC00BE52EE /* Coordinator.swift in Sources */,
+				09E5E8831E66167600BD44B5 /* StringsLine.swift in Sources */,
 				09377B101E5A376900BE52EE /* ResourceDetailsView.swift in Sources */,
 				091B3BDE1E54F6D00033A6E7 /* Resource.swift in Sources */,
 				09377B061E5A009200BE52EE /* ProjectsListView.swift in Sources */,
@@ -495,6 +547,7 @@
 				09CD18C01E56531400CA7C41 /* ProjectKind.swift in Sources */,
 				09CD18BD1E560AA900CA7C41 /* ResourceViewModel.swift in Sources */,
 				098A2E261E59CB8100BD26CB /* InternationalizerViewsController.swift in Sources */,
+				09E5E8851E6616BC00BD44B5 /* StringsFile.swift in Sources */,
 				09CD18C61E56557B00CA7C41 /* OutlineDataContext.swift in Sources */,
 				09377B091E5A064700BE52EE /* Constants.swift in Sources */,
 				09377B131E5A386C00BE52EE /* RootCoordinator.swift in Sources */,
@@ -502,8 +555,11 @@
 				09377B1C1E5A4C8800BE52EE /* StringsGridViewController.swift in Sources */,
 				098A2E231E59BB8B00BD26CB /* ProjectsRepository.swift in Sources */,
 				09CD18CB1E565E6300CA7C41 /* NavigatorItem.swift in Sources */,
+				09E5E88E1E662BCA00BD44B5 /* StringsGridView.swift in Sources */,
 				09377B0D1E5A34AB00BE52EE /* ResourceDetailsViewController.swift in Sources */,
+				09E5E88B1E661CFB00BD44B5 /* StringsFileFactory.swift in Sources */,
 				091B3BDC1E54F6410033A6E7 /* Project.swift in Sources */,
+				09E5E8801E66146200BD44B5 /* StringsGridViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

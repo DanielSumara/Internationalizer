@@ -40,6 +40,7 @@ extension ResourceDetailsViewController: ResourceDetailsView {
         switch resource.kind {
         case .storyboard: selectedTabViewItemIndex = 0
         case .strings:
+            stringsGrid.viewModel = StringsGridViewModel(from: resource)
             selectedTabViewItemIndex = ViewControllerIndexFor.stringsGrid
         case .xib: selectedTabViewItemIndex = 0
         }

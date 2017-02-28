@@ -14,14 +14,30 @@ class StringsGridViewController: NSViewController {
     
     @IBOutlet weak var tableView: NSTableView!
     
+    // MARK:- Properties
+    
+    var viewModel: StringsGridViewModel! {
+        didSet {
+            viewModel.view = self
+        }
+    }
+    
     // MARK:- Lifecicle
+    
+}
+
+extension StringsGridViewController: StringsGridView {
+    
+    func reload() {
+        guard isViewLoaded else { return }
+    }
     
 }
 
 extension StringsGridViewController: NSTableViewDataSource {
     
     func numberOfRows(in tableView: NSTableView) -> Int {
-        return 13
+        return viewModel.numberOfItems
     }
     
 }

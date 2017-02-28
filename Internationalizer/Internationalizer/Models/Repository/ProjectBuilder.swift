@@ -41,6 +41,7 @@ class ProjectBuilder {
         if var paths = resourcesPaths[resourceName] {
             resources[resourceName]?.promote(to: ResourceKind(from: fileExtension))
             paths.append(url)
+            resourcesPaths[resourceName] = paths
         } else {
             resources[resourceName] = ResourceKind(from: fileExtension)
             resourcesPaths[resourceName] = [url]
