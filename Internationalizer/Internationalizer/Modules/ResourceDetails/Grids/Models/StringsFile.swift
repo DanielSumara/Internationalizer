@@ -13,6 +13,24 @@ struct StringsFile {
     // MARK:- Properties
     
     let project: String
-    let lines: [StringsLine]
+    let properties: Properties
+    
+}
+
+extension StringsFile: Equatable {
+    
+    static func ==(lhs: StringsFile, rhs: StringsFile) -> Bool {
+        return lhs.project == rhs.project
+    }
+    
+}
+
+extension StringsFile: Comparable {
+
+    static func <(lhs: StringsFile, rhs: StringsFile) -> Bool {
+        guard lhs.project != "Base" else { return true }
+        guard rhs.project != "Base" else { return false }
+        return lhs.project < rhs.project
+    }
     
 }

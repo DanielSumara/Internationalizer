@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		090916461E6AC1FC003CBEA6 /* StringsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090916451E6AC1FC003CBEA6 /* StringsViewModel.swift */; };
 		091B3BAF1E54DD6B0033A6E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091B3BAE1E54DD6B0033A6E7 /* AppDelegate.swift */; };
 		091B3BC11E54DD6B0033A6E7 /* InternationalizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091B3BC01E54DD6B0033A6E7 /* InternationalizerTests.swift */; };
 		091B3BCD1E54DDC70033A6E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 091B3BCC1E54DDC70033A6E7 /* Main.storyboard */; };
@@ -24,6 +25,9 @@
 		09377B131E5A386C00BE52EE /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09377B121E5A386C00BE52EE /* RootCoordinator.swift */; };
 		09377B161E5A3BCC00BE52EE /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09377B151E5A3BCC00BE52EE /* Coordinator.swift */; };
 		09377B1C1E5A4C8800BE52EE /* StringsGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09377B1B1E5A4C8800BE52EE /* StringsGridViewController.swift */; };
+		0952AF251E6B457C00FCF696 /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0952AF241E6B457C00FCF696 /* Property.swift */; };
+		0952AF271E6B466D00FCF696 /* Properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0952AF261E6B466D00FCF696 /* Properties.swift */; };
+		0952AF2B1E6B47A200FCF696 /* SequenceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0952AF2A1E6B47A200FCF696 /* SequenceExtensions.swift */; };
 		098A2E231E59BB8B00BD26CB /* ProjectsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098A2E221E59BB8B00BD26CB /* ProjectsRepository.swift */; };
 		098A2E261E59CB8100BD26CB /* InternationalizerViewsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098A2E251E59CB8100BD26CB /* InternationalizerViewsController.swift */; };
 		098A2E291E59D94C00BD26CB /* OperationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098A2E281E59D94C00BD26CB /* OperationResult.swift */; };
@@ -38,7 +42,7 @@
 		09E5E8831E66167600BD44B5 /* StringsLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E5E8821E66167600BD44B5 /* StringsLine.swift */; };
 		09E5E8851E6616BC00BD44B5 /* StringsFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E5E8841E6616BC00BD44B5 /* StringsFile.swift */; };
 		09E5E8881E6618D000BD44B5 /* FileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E5E8871E6618D000BD44B5 /* FileReader.swift */; };
-		09E5E88B1E661CFB00BD44B5 /* StringsFileFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E5E88A1E661CFB00BD44B5 /* StringsFileFactory.swift */; };
+		09E5E88B1E661CFB00BD44B5 /* StringsPropertiesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E5E88A1E661CFB00BD44B5 /* StringsPropertiesFactory.swift */; };
 		09E5E88E1E662BCA00BD44B5 /* StringsGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E5E88D1E662BCA00BD44B5 /* StringsGridView.swift */; };
 		09EEB9AE1E5B5C2500827C9D /* FieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EEB9AD1E5B5C2500827C9D /* FieldCell.swift */; };
 		09F6A0F81E59EFBF0049E16E /* ProjectBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F6A0F71E59EFBF0049E16E /* ProjectBuilder.swift */; };
@@ -55,6 +59,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		090916451E6AC1FC003CBEA6 /* StringsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringsViewModel.swift; sourceTree = "<group>"; };
 		091B3BAB1E54DD6B0033A6E7 /* Internationalizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Internationalizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		091B3BAE1E54DD6B0033A6E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		091B3BB71E54DD6B0033A6E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -76,6 +81,9 @@
 		09377B121E5A386C00BE52EE /* RootCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
 		09377B151E5A3BCC00BE52EE /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		09377B1B1E5A4C8800BE52EE /* StringsGridViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringsGridViewController.swift; sourceTree = "<group>"; };
+		0952AF241E6B457C00FCF696 /* Property.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
+		0952AF261E6B466D00FCF696 /* Properties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Properties.swift; sourceTree = "<group>"; };
+		0952AF2A1E6B47A200FCF696 /* SequenceExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SequenceExtensions.swift; sourceTree = "<group>"; };
 		098A2E221E59BB8B00BD26CB /* ProjectsRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsRepository.swift; sourceTree = "<group>"; };
 		098A2E251E59CB8100BD26CB /* InternationalizerViewsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InternationalizerViewsController.swift; sourceTree = "<group>"; };
 		098A2E281E59D94C00BD26CB /* OperationResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationResult.swift; sourceTree = "<group>"; };
@@ -90,7 +98,7 @@
 		09E5E8821E66167600BD44B5 /* StringsLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringsLine.swift; sourceTree = "<group>"; };
 		09E5E8841E6616BC00BD44B5 /* StringsFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringsFile.swift; sourceTree = "<group>"; };
 		09E5E8871E6618D000BD44B5 /* FileReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileReader.swift; sourceTree = "<group>"; };
-		09E5E88A1E661CFB00BD44B5 /* StringsFileFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringsFileFactory.swift; sourceTree = "<group>"; };
+		09E5E88A1E661CFB00BD44B5 /* StringsPropertiesFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringsPropertiesFactory.swift; sourceTree = "<group>"; };
 		09E5E88D1E662BCA00BD44B5 /* StringsGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringsGridView.swift; sourceTree = "<group>"; };
 		09EEB9AD1E5B5C2500827C9D /* FieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldCell.swift; sourceTree = "<group>"; };
 		09F6A0F71E59EFBF0049E16E /* ProjectBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectBuilder.swift; sourceTree = "<group>"; };
@@ -215,9 +223,11 @@
 			isa = PBXGroup;
 			children = (
 				091B3BDB1E54F6410033A6E7 /* Project.swift */,
+				0952AF241E6B457C00FCF696 /* Property.swift */,
 				091B3BDD1E54F6D00033A6E7 /* Resource.swift */,
 				09CD18BE1E560B1700CA7C41 /* Constants */,
 				098A2E211E59BB6300BD26CB /* Repository */,
+				0952AF261E6B466D00FCF696 /* Properties.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -310,6 +320,22 @@
 			path = Xib;
 			sourceTree = "<group>";
 		};
+		0952AF281E6B476200FCF696 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0952AF291E6B477900FCF696 /* SwiftStandardLibrary */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0952AF291E6B477900FCF696 /* SwiftStandardLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				0952AF2A1E6B47A200FCF696 /* SequenceExtensions.swift */,
+			);
+			path = SwiftStandardLibrary;
+			sourceTree = "<group>";
+		};
 		098A2E211E59BB6300BD26CB /* Repository */ = {
 			isa = PBXGroup;
 			children = (
@@ -350,8 +376,9 @@
 			isa = PBXGroup;
 			children = (
 				09377B071E5A060700BE52EE /* Constants */,
-				098A2E271E59D8F500BD26CB /* Enums */,
 				09CD18C41E56547000CA7C41 /* Contracts */,
+				098A2E271E59D8F500BD26CB /* Enums */,
+				0952AF281E6B476200FCF696 /* Extensions */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
@@ -395,7 +422,7 @@
 		09E5E8891E661CE100BD44B5 /* Factories */ = {
 			isa = PBXGroup;
 			children = (
-				09E5E88A1E661CFB00BD44B5 /* StringsFileFactory.swift */,
+				09E5E88A1E661CFB00BD44B5 /* StringsPropertiesFactory.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -412,6 +439,7 @@
 			isa = PBXGroup;
 			children = (
 				09E5E87F1E66146200BD44B5 /* StringsGridViewModel.swift */,
+				090916451E6AC1FC003CBEA6 /* StringsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -541,6 +569,7 @@
 				09377B161E5A3BCC00BE52EE /* Coordinator.swift in Sources */,
 				09E5E8831E66167600BD44B5 /* StringsLine.swift in Sources */,
 				09377B101E5A376900BE52EE /* ResourceDetailsView.swift in Sources */,
+				0952AF271E6B466D00FCF696 /* Properties.swift in Sources */,
 				091B3BDE1E54F6D00033A6E7 /* Resource.swift in Sources */,
 				09377B061E5A009200BE52EE /* ProjectsListView.swift in Sources */,
 				091B3BE11E54FE330033A6E7 /* ProjectsListViewModel.swift in Sources */,
@@ -548,17 +577,20 @@
 				09CD18BD1E560AA900CA7C41 /* ResourceViewModel.swift in Sources */,
 				098A2E261E59CB8100BD26CB /* InternationalizerViewsController.swift in Sources */,
 				09E5E8851E6616BC00BD44B5 /* StringsFile.swift in Sources */,
+				0952AF251E6B457C00FCF696 /* Property.swift in Sources */,
 				09CD18C61E56557B00CA7C41 /* OutlineDataContext.swift in Sources */,
 				09377B091E5A064700BE52EE /* Constants.swift in Sources */,
 				09377B131E5A386C00BE52EE /* RootCoordinator.swift in Sources */,
 				09F6A0F81E59EFBF0049E16E /* ProjectBuilder.swift in Sources */,
 				09377B1C1E5A4C8800BE52EE /* StringsGridViewController.swift in Sources */,
 				098A2E231E59BB8B00BD26CB /* ProjectsRepository.swift in Sources */,
+				0952AF2B1E6B47A200FCF696 /* SequenceExtensions.swift in Sources */,
 				09CD18CB1E565E6300CA7C41 /* NavigatorItem.swift in Sources */,
 				09E5E88E1E662BCA00BD44B5 /* StringsGridView.swift in Sources */,
 				09377B0D1E5A34AB00BE52EE /* ResourceDetailsViewController.swift in Sources */,
-				09E5E88B1E661CFB00BD44B5 /* StringsFileFactory.swift in Sources */,
+				09E5E88B1E661CFB00BD44B5 /* StringsPropertiesFactory.swift in Sources */,
 				091B3BDC1E54F6410033A6E7 /* Project.swift in Sources */,
+				090916461E6AC1FC003CBEA6 /* StringsViewModel.swift in Sources */,
 				09E5E8801E66146200BD44B5 /* StringsGridViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

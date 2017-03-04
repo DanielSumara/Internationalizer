@@ -14,22 +14,21 @@ class StringsGridViewModel {
     
     weak var view: StringsGridView!
     
+    fileprivate var files: [String: Properties]
+    fileprivate var mapping: [Int: String]
+    fileprivate var keys: [String]
+    
     private let resource: Resource
-    private let files: [String: StringsFile]
     
     // MARK:- Lifecycle
     
     init(from resource: Resource) {
         self.resource = resource
         
-        var files: [String: StringsFile] = [:]
-        let builder = StringsFileFactory()
-        for path in resource.paths {
-            let file = builder.create(from: path)
-            files[file.project] = file
-        }
-        
-        self.files = files
+        let builder = StringsPropertiesFactory()
+        files = resource.paths.map { builder.create(from: $0) }.toDictionary { ($0.name, $0) }
+        mapping = files.values.sorted().toDictionary { ($1, $0.name) }
+        keys = Array(Set(files.values.flatMap { $0.keys }))
     }
     
     deinit {
@@ -40,6 +39,22 @@ class StringsGridViewModel {
 
 extension StringsGridViewModel {
     
-    var numberOfItems: Int { return 3 }
+    var numberOfItems: Int { return keys.count }
+    var numberOfColumns: Int { return files.count + 1 }
+    
+    func titleForColumn(at index: Int) -> String {
+        guard index != 0 else { return "Key" }
+        guard let projectName = mapping[index - 1] else { return "?" }
+        return projectName
+    }
+    
+    func value(for identifier: String, at index: Int) -> String? {
+        if identifier == "Key" {
+            return keys[index]
+        }
+        
+        guard let properties = files[identifier] else { return "?" }
+        return properties.getValue(for: keys[index])
+    }
     
 }

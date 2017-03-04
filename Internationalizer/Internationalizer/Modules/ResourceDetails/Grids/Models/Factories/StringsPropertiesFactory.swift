@@ -1,5 +1,5 @@
 //
-//  StringsFileFactory.swift
+//  StringsPropertiesFactory.swift
 //  Internationalizer
 //
 //  Created by Daniel Sumara on 28.02.2017.
@@ -8,17 +8,17 @@
 
 import Foundation
 
-class StringsFileFactory {
+class StringsPropertiesFactory {
     
     // MARK:- Properties
     
-    private var lines: [StringsLine] = []
+    private var lines: [Property] = []
     
     private var isInMultilineComment: Bool = false
     
     // MARK:- API
     
-    func create(from path: URL) -> StringsFile {
+    func create(from path: URL) -> Properties {
         lines.removeAll(keepingCapacity: true)
         
         let fileReader = FileReader(for: path)
@@ -39,7 +39,7 @@ class StringsFileFactory {
             
             guard !trimmedLine.isComment else { continue }
             
-            if let stringsLine = stringsLine(from: trimmedLine) {
+            if let stringsLine = Property(from: trimmedLine) {
                 lines.append(stringsLine)
             }
         }
@@ -49,12 +49,22 @@ class StringsFileFactory {
         let pathComponents = path.pathComponents
         let project = pathComponents[pathComponents.count - 2].components(separatedBy: ".").first!
         
-        return StringsFile(project: project, lines: lines)
+        return Properties(project, with: lines)
     }
     
-    // MARK:- Methods
+}
+
+fileprivate extension String {
     
-    private func stringsLine(from line: String) -> StringsLine? {
+    var startsComment: Bool { return self.hasPrefix("/*") }
+    var endsComment: Bool { return self.hasSuffix("*/") }
+    var isComment: Bool { return self.hasPrefix("#") || hasPrefix("//") }
+    
+}
+
+fileprivate extension Property {
+    
+    init?(from line: String) {
         let pair = line.components(separatedBy: "=")
         guard pair.count == 2 else { return nil }
         
@@ -69,15 +79,7 @@ class StringsFileFactory {
         value.remove(at: value.index(value.endIndex, offsetBy: -1))
         value = value.trimmingCharacters(in: .whitespaces)
         
-        return StringsLine(key: key, value: value)
+        self.init(key, equal: value)
     }
-    
-}
-
-fileprivate extension String {
-    
-    var startsComment: Bool { return self.hasPrefix("/*") }
-    var endsComment: Bool { return self.hasSuffix("*/") }
-    var isComment: Bool { return self.hasPrefix("#") || hasPrefix("//") }
     
 }
