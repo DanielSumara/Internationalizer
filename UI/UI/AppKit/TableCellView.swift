@@ -8,7 +8,7 @@
 
 import AppKit
 
-public class TableCellView: NSTableCellView {
+open class TableCellView: NSTableCellView {
     
     // MARK:- Properties
     

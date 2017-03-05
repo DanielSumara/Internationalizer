@@ -8,21 +8,21 @@
 
 import Foundation
 
-struct Property {
+public struct Property {
     
     // MARK:- Properties
     
-    let key: String
-    let value: String?
+    public let key: String
+    public let value: String?
     
     // MARK:- Lifecycle
     
-    init(_ key: String, equal value: String) {
+    public init(_ key: String, equal value: String) {
         self.key = key
         self.value = value
     }
     
-    init(_ key: String) {
+    public init(_ key: String) {
         self.key = key
         value = nil
     }
@@ -31,7 +31,7 @@ struct Property {
 
 extension Property: Equatable {
     
-    static func ==(lhs: Property, rhs: Property) -> Bool {
+    public static func ==(lhs: Property, rhs: Property) -> Bool {
         return lhs.key == rhs.key && lhs.value == rhs.value
     }
     

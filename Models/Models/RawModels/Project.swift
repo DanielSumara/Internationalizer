@@ -17,6 +17,15 @@ public struct Project {
     public let kind: ProjectKind
     public let resources: [Resource]
     
+    // MARK:- Lifecycle
+    
+    public init(name: String, path: URL, kind: ProjectKind, resources: [Resource]) {
+        self.name = name
+        self.path = path
+        self.kind = kind
+        self.resources = resources
+    }
+    
 }
 
 extension Project: Hashable {

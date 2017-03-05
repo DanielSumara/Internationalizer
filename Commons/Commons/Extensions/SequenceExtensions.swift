@@ -8,9 +8,9 @@
 
 import Foundation
 
-extension Sequence {
+public extension Sequence {
     
-    func toDictionary<Key: Hashable, Value>(_ transformer: (Iterator.Element) -> (Key, Value)) -> Dictionary<Key, Value> {
+    public func toDictionary<Key: Hashable, Value>(_ transformer: (Iterator.Element) -> (Key, Value)) -> Dictionary<Key, Value> {
         var dictionary: [Key: Value] = [:]
         
         for pair in map({ transformer($0) }) {
@@ -20,7 +20,7 @@ extension Sequence {
         return dictionary
     }
     
-    func toDictionary<Key: Hashable, Value>(_ transformer: (Iterator.Element, Int) -> (Key, Value)) -> Dictionary<Key, Value> {
+    public func toDictionary<Key: Hashable, Value>(_ transformer: (Iterator.Element, Int) -> (Key, Value)) -> Dictionary<Key, Value> {
         var dictionary: [Key: Value] = [:]
         
         for item in self {

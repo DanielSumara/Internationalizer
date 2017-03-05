@@ -6,7 +6,8 @@
 //  Copyright © 2017 Daniel Sumara. All rights reserved.
 //
 
-import AppKit
+import Infrastructure
+import UI
 
 class FieldCell: TableCellView {
     
