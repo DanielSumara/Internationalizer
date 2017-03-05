@@ -6,7 +6,8 @@
 //  Copyright © 2017 Daniel Sumara. All rights reserved.
 //
 
-import Foundation
+import Commons
+import Models
 
 class StringsGridViewModel {
     

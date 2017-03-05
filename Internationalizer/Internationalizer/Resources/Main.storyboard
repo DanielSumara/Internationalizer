@@ -960,7 +960,7 @@
                                                     </textFieldCell>
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES"/>
                                                     <prototypeCellViews>
-                                                        <tableCellView identifier="TableCellView" id="hIt-QM-Vw7" customClass="TableCellView" customModule="Internationalizer" customModuleProvider="target">
+                                                        <tableCellView identifier="TableCellView" id="hIt-QM-Vw7" customClass="TableCellView" customModule="UI">
                                                             <rect key="frame" x="1" y="1" width="447" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>

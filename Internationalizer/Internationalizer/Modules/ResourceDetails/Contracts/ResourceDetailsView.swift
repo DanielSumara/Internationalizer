@@ -6,7 +6,8 @@
 //  Copyright © 2017 Daniel Sumara. All rights reserved.
 //
 
-import Foundation
+import Infrastructure
+import Models
 
 protocol ResourceDetailsView: MvvmView {
     
