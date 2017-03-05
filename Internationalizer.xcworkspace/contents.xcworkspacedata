@@ -5,9 +5,6 @@
       location = "group:Internationalizer/Internationalizer.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:UI/UI.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:Commons/Commons.xcodeproj">
    </FileRef>
    <FileRef
@@ -15,5 +12,8 @@
    </FileRef>
    <FileRef
       location = "group:Models/Models.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:UI/UI.xcodeproj">
    </FileRef>
 </Workspace>
