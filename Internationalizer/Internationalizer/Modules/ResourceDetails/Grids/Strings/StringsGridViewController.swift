@@ -37,7 +37,7 @@ extension StringsGridViewController: StringsGridView {
             tableView.removeTableColumn(column)
         }
         
-        let columnWidh = (view.bounds.width - 12) / CGFloat(viewModel.numberOfColumns)
+        let columnWidh = (view.bounds.width - 11) / CGFloat(viewModel.numberOfColumns)
         for index in 0 ..< viewModel.numberOfColumns {
             let columnTitle = viewModel.titleForColumn(at: index)
             let column = NSTableColumn(identifier: columnTitle)
@@ -68,7 +68,7 @@ extension StringsGridViewController: NSTableViewDelegate {
         guard let column = tableColumn else { return nil }
         
         let cell = FieldCell.dequeue(from: tableView, for: self) as FieldCell
-        cell.textField?.stringValue = viewModel.value(for: column.identifier, at: row) ?? ""
+        cell.value = viewModel.value(for: column.identifier, at: row)
         return cell
     }
     

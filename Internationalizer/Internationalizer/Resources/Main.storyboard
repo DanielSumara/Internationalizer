@@ -6,6 +6,7 @@
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="box content view" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -766,13 +767,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <scrollView autohidesScrollers="YES" horizontalLineScroll="24" horizontalPageScroll="10" verticalLineScroll="24" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZh-qz-iyL">
+                            <scrollView autohidesScrollers="YES" horizontalLineScroll="34" horizontalPageScroll="10" verticalLineScroll="34" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZh-qz-iyL">
                                 <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                                 <clipView key="contentView" id="fBS-HM-W1n">
                                     <rect key="frame" x="1" y="0.0" width="448" height="299"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" multipleSelection="NO" autosaveColumns="NO" rowHeight="22" rowSizeStyle="automatic" headerView="Vnk-8F-AvX" viewBased="YES" id="1sY-9w-HL0">
+                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" multipleSelection="NO" autosaveColumns="NO" rowHeight="32" rowSizeStyle="automatic" headerView="Vnk-8F-AvX" viewBased="YES" id="1sY-9w-HL0">
                                             <rect key="frame" x="0.0" y="0.0" width="448" height="276"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
@@ -794,25 +795,46 @@
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
                                                         <tableCellView identifier="FieldCell" id="FPy-wG-cAJ" customClass="FieldCell" customModule="Internationalizer" customModuleProvider="target">
-                                                            <rect key="frame" x="1" y="1" width="200" height="22"/>
+                                                            <rect key="frame" x="1" y="1" width="200" height="32"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
-                                                                <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x75-mt-1Ll">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="22"/>
-                                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Value missing" drawsBackground="YES" id="kem-fm-kJi">
-                                                                        <font key="font" metaFont="system"/>
-                                                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                                    </textFieldCell>
-                                                                </textField>
+                                                                <stackView distribution="fill" orientation="horizontal" alignment="centerY" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gOa-vM-PRx">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="32"/>
+                                                                    <subviews>
+                                                                        <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x75-mt-1Ll">
+                                                                            <rect key="frame" x="0.0" y="5" width="184" height="22"/>
+                                                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Value missing" id="kem-fm-kJi">
+                                                                                <font key="font" metaFont="system"/>
+                                                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
+                                                                            </textFieldCell>
+                                                                        </textField>
+                                                                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bv2-ww-8MD">
+                                                                            <rect key="frame" x="184" y="8" width="16" height="16"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" secondItem="bv2-ww-8MD" secondAttribute="height" multiplier="1:1" id="4nH-me-FaH"/>
+                                                                            </constraints>
+                                                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSStatusUnavailable" id="7B0-MA-KaZ"/>
+                                                                        </imageView>
+                                                                    </subviews>
+                                                                    <visibilityPriorities>
+                                                                        <integer value="1000"/>
+                                                                        <integer value="1000"/>
+                                                                    </visibilityPriorities>
+                                                                    <customSpacing>
+                                                                        <real value="3.4028234663852886e+38"/>
+                                                                        <real value="3.4028234663852886e+38"/>
+                                                                    </customSpacing>
+                                                                </stackView>
                                                             </subviews>
                                                             <constraints>
-                                                                <constraint firstAttribute="trailing" secondItem="x75-mt-1Ll" secondAttribute="trailing" id="5On-B6-RFs"/>
-                                                                <constraint firstItem="x75-mt-1Ll" firstAttribute="leading" secondItem="FPy-wG-cAJ" secondAttribute="leading" id="bTH-j2-aMy"/>
-                                                                <constraint firstItem="x75-mt-1Ll" firstAttribute="top" secondItem="FPy-wG-cAJ" secondAttribute="top" id="i0s-Sd-vOV"/>
-                                                                <constraint firstAttribute="bottom" secondItem="x75-mt-1Ll" secondAttribute="bottom" id="vxj-mE-5yb"/>
+                                                                <constraint firstAttribute="trailing" secondItem="gOa-vM-PRx" secondAttribute="trailing" id="WDv-nQ-Gcg"/>
+                                                                <constraint firstItem="gOa-vM-PRx" firstAttribute="top" secondItem="FPy-wG-cAJ" secondAttribute="top" id="er2-oa-eOL"/>
+                                                                <constraint firstAttribute="bottom" secondItem="gOa-vM-PRx" secondAttribute="bottom" id="pbd-xv-PLa"/>
+                                                                <constraint firstItem="gOa-vM-PRx" firstAttribute="leading" secondItem="FPy-wG-cAJ" secondAttribute="leading" id="u9G-WS-3XM"/>
                                                             </constraints>
                                                             <connections>
+                                                                <outlet property="imageView" destination="bv2-ww-8MD" id="YYJ-jI-3K8"/>
                                                                 <outlet property="textField" destination="x75-mt-1Ll" id="OLt-3E-kSl"/>
                                                             </connections>
                                                         </tableCellView>
@@ -1008,5 +1030,6 @@
     <resources>
         <image name="NSActionTemplate" width="14" height="14"/>
         <image name="NSAddTemplate" width="11" height="11"/>
+        <image name="NSStatusUnavailable" width="16" height="16"/>
     </resources>
 </document>
