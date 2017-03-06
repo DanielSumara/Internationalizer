@@ -25,9 +25,9 @@
         <relationship name="owner" maxCount="1" deletionRule="Nullify" destinationEntity="ProjectMO" inverseName="resources" inverseEntity="ProjectMO" syncable="YES"/>
     </entity>
     <elements>
-        <element name="PropertyMO" positionX="-63" positionY="-18" width="128" height="90"/>
-        <element name="LocalizationMO" positionX="-54" positionY="9" width="128" height="105"/>
-        <element name="ResourceMO" positionX="-36" positionY="45" width="128" height="120"/>
-        <element name="ProjectMO" positionX="-27" positionY="81" width="128" height="105"/>
+        <element name="PropertyMO" positionX="-11" positionY="72" width="128" height="90"/>
+        <element name="LocalizationMO" positionX="-20" positionY="-81" width="128" height="105"/>
+        <element name="ResourceMO" positionX="-27" positionY="-243" width="128" height="120"/>
+        <element name="ProjectMO" positionX="-225" positionY="-240" width="128" height="105"/>
     </elements>
 </model>
