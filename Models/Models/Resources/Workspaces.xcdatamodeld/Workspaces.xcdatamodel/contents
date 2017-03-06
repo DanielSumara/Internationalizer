@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="16D32" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="LocalizationMO" representedClassName="LocalizationMO" syncable="YES">
+        <attribute name="languageCode" attributeType="String" syncable="YES"/>
+        <attribute name="path" attributeType="String" syncable="YES"/>
+        <relationship name="owner" maxCount="1" deletionRule="Nullify" destinationEntity="ResourceMO" inverseName="localizations" inverseEntity="ResourceMO" syncable="YES"/>
+        <relationship name="properties" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="PropertyMO" inverseName="owner" inverseEntity="PropertyMO" syncable="YES"/>
+    </entity>
+    <entity name="ProjectMO" representedClassName="ProjectMO" syncable="YES">
+        <attribute name="kind" attributeType="String" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="path" attributeType="String" syncable="YES"/>
+        <relationship name="resources" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ResourceMO" inverseName="owner" inverseEntity="ResourceMO" syncable="YES"/>
+    </entity>
+    <entity name="PropertyMO" representedClassName="PropertyMO" syncable="YES">
+        <attribute name="key" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="value" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="owner" maxCount="1" deletionRule="Nullify" destinationEntity="LocalizationMO" inverseName="properties" inverseEntity="LocalizationMO" syncable="YES"/>
+    </entity>
+    <entity name="ResourceMO" representedClassName="ResourceMO" syncable="YES">
+        <attribute name="kind" attributeType="String" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="path" attributeType="String" syncable="YES"/>
+        <relationship name="localizations" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="LocalizationMO" inverseName="owner" inverseEntity="LocalizationMO" syncable="YES"/>
+        <relationship name="owner" maxCount="1" deletionRule="Nullify" destinationEntity="ProjectMO" inverseName="resources" inverseEntity="ProjectMO" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="PropertyMO" positionX="-63" positionY="-18" width="128" height="90"/>
+        <element name="LocalizationMO" positionX="-54" positionY="9" width="128" height="105"/>
+        <element name="ResourceMO" positionX="-36" positionY="45" width="128" height="120"/>
+        <element name="ProjectMO" positionX="-27" positionY="81" width="128" height="105"/>
+    </elements>
+</model>
