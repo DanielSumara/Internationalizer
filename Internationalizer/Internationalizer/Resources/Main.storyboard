@@ -798,8 +798,8 @@
                                                             <rect key="frame" x="1" y="1" width="296.5" height="32"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
-                                                                <stackView distribution="fill" orientation="horizontal" alignment="centerY" spacing="6" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gOa-vM-PRx">
-                                                                    <rect key="frame" x="8" y="0.0" width="288.5" height="32"/>
+                                                                <stackView distribution="fill" orientation="horizontal" alignment="centerY" spacing="14" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gOa-vM-PRx">
+                                                                    <rect key="frame" x="8" y="0.0" width="296.5" height="32"/>
                                                                     <subviews>
                                                                         <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x75-mt-1Ll">
                                                                             <rect key="frame" x="-2" y="7.5" width="270.5" height="17"/>
@@ -810,7 +810,7 @@
                                                                             </textFieldCell>
                                                                         </textField>
                                                                         <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bv2-ww-8MD">
-                                                                            <rect key="frame" x="272.5" y="8" width="16" height="16"/>
+                                                                            <rect key="frame" x="280.5" y="8" width="16" height="16"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" secondItem="bv2-ww-8MD" secondAttribute="height" multiplier="1:1" id="4nH-me-FaH"/>
                                                                             </constraints>
@@ -828,7 +828,7 @@
                                                                 </stackView>
                                                             </subviews>
                                                             <constraints>
-                                                                <constraint firstAttribute="trailing" secondItem="gOa-vM-PRx" secondAttribute="trailing" id="WDv-nQ-Gcg"/>
+                                                                <constraint firstAttribute="trailing" secondItem="gOa-vM-PRx" secondAttribute="trailing" constant="8" id="WDv-nQ-Gcg"/>
                                                                 <constraint firstItem="gOa-vM-PRx" firstAttribute="top" secondItem="FPy-wG-cAJ" secondAttribute="top" id="er2-oa-eOL"/>
                                                                 <constraint firstAttribute="bottom" secondItem="gOa-vM-PRx" secondAttribute="bottom" id="pbd-xv-PLa"/>
                                                                 <constraint firstItem="gOa-vM-PRx" firstAttribute="leading" secondItem="FPy-wG-cAJ" secondAttribute="leading" constant="8" id="u9G-WS-3XM"/>
