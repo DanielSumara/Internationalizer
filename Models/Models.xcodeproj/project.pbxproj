@@ -15,6 +15,7 @@
 		09AD02C41E6F592C0024444D /* LocalizationMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AD02C31E6F592C0024444D /* LocalizationMO.swift */; };
 		09AD02C61E6F5FDE0024444D /* ResourceMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AD02C51E6F5FDE0024444D /* ResourceMO.swift */; };
 		09AD02C81E6F61770024444D /* ProjectMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AD02C71E6F61770024444D /* ProjectMO.swift */; };
+		09C48D921E748D0B00BCA91B /* RepositoryContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C48D911E748D0B00BCA91B /* RepositoryContext.swift */; };
 		09D96BEF1E6E0B5B006FD491 /* Workspaces.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 09D96BED1E6E0B5B006FD491 /* Workspaces.xcdatamodeld */; };
 		09E1517E1E6C70E000710002 /* Properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E1517C1E6C70E000710002 /* Properties.swift */; };
 		09E1517F1E6C70E000710002 /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E1517D1E6C70E000710002 /* Property.swift */; };
@@ -36,6 +37,7 @@
 		09AD02C31E6F592C0024444D /* LocalizationMO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizationMO.swift; sourceTree = "<group>"; };
 		09AD02C51E6F5FDE0024444D /* ResourceMO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourceMO.swift; sourceTree = "<group>"; };
 		09AD02C71E6F61770024444D /* ProjectMO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectMO.swift; sourceTree = "<group>"; };
+		09C48D911E748D0B00BCA91B /* RepositoryContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryContext.swift; sourceTree = "<group>"; };
 		09D96BEE1E6E0B5B006FD491 /* Workspaces.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Workspaces.xcdatamodel; sourceTree = "<group>"; };
 		09E1517C1E6C70E000710002 /* Properties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Properties.swift; sourceTree = "<group>"; };
 		09E1517D1E6C70E000710002 /* Property.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				09E151791E6C70DA00710002 /* CoreDataModels */,
+				09C48D901E748CD000BCA91B /* DataContexts */,
 				09E1517A1E6C70E000710002 /* RawModels */,
 				09D96BEC1E6E0ACF006FD491 /* Resources */,
 				0968F7821E6C670F00B9B3AD /* SupportFiles */,
@@ -94,6 +97,14 @@
 				0968F77B1E6C66E600B9B3AD /* Info.plist */,
 			);
 			name = SupportFiles;
+			sourceTree = "<group>";
+		};
+		09C48D901E748CD000BCA91B /* DataContexts */ = {
+			isa = PBXGroup;
+			children = (
+				09C48D911E748D0B00BCA91B /* RepositoryContext.swift */,
+			);
+			path = DataContexts;
 			sourceTree = "<group>";
 		};
 		09D96BEC1E6E0ACF006FD491 /* Resources */ = {
@@ -242,6 +253,7 @@
 				09AD02C01E6F589D0024444D /* PropertyMO.swift in Sources */,
 				09AD02C81E6F61770024444D /* ProjectMO.swift in Sources */,
 				09AD02C61E6F5FDE0024444D /* ResourceMO.swift in Sources */,
+				09C48D921E748D0B00BCA91B /* RepositoryContext.swift in Sources */,
 				09D96BEF1E6E0B5B006FD491 /* Workspaces.xcdatamodeld in Sources */,
 				09AD02C41E6F592C0024444D /* LocalizationMO.swift in Sources */,
 				09E151D21E6C73D700710002 /* Project.swift in Sources */,
