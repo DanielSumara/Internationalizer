@@ -10,12 +10,18 @@
 		0968F77C1E6C66E600B9B3AD /* Models.h in Headers */ = {isa = PBXBuildFile; fileRef = 0968F77A1E6C66E600B9B3AD /* Models.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0968F7851E6C6B1600B9B3AD /* CoreDataModels in Resources */ = {isa = PBXBuildFile; fileRef = 0968F7841E6C6B1600B9B3AD /* CoreDataModels */; };
 		0968F7871E6C6B8800B9B3AD /* RawModels in Resources */ = {isa = PBXBuildFile; fileRef = 0968F7861E6C6B8800B9B3AD /* RawModels */; };
-		09AD02C01E6F589D0024444D /* PropertyMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AD02BF1E6F589D0024444D /* PropertyMO.swift */; };
 		09AD02C21E6F58B50024444D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09AD02C11E6F58B50024444D /* CoreData.framework */; };
-		09AD02C41E6F592C0024444D /* LocalizationMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AD02C31E6F592C0024444D /* LocalizationMO.swift */; };
-		09AD02C61E6F5FDE0024444D /* ResourceMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AD02C51E6F5FDE0024444D /* ResourceMO.swift */; };
-		09AD02C81E6F61770024444D /* ProjectMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AD02C71E6F61770024444D /* ProjectMO.swift */; };
 		09C48D921E748D0B00BCA91B /* RepositoryContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C48D911E748D0B00BCA91B /* RepositoryContext.swift */; };
+		09CBF0271E8066FC00F8CF04 /* NSManagedObjectExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CBF0261E8066FC00F8CF04 /* NSManagedObjectExtensions.swift */; };
+		09CBF0291E806CBB00F8CF04 /* RepositoryFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CBF0281E806CBB00F8CF04 /* RepositoryFactory.swift */; };
+		09CBF03C1E80813600F8CF04 /* LocalizationMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CBF0341E80813600F8CF04 /* LocalizationMO.swift */; };
+		09CBF03D1E80813600F8CF04 /* ProjectMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CBF0351E80813600F8CF04 /* ProjectMO.swift */; };
+		09CBF03E1E80813600F8CF04 /* PropertyMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CBF0361E80813600F8CF04 /* PropertyMO.swift */; };
+		09CBF03F1E80813600F8CF04 /* ResourceMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CBF0381E80813600F8CF04 /* ResourceMO+CoreDataProperties.swift */; };
+		09CBF0401E80813600F8CF04 /* ResourceMO+Kind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CBF0391E80813600F8CF04 /* ResourceMO+Kind.swift */; };
+		09CBF0411E80813600F8CF04 /* ResourceMO+KindExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CBF03A1E80813600F8CF04 /* ResourceMO+KindExtensions.swift */; };
+		09CBF0421E80813600F8CF04 /* ResourceMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CBF03B1E80813600F8CF04 /* ResourceMO.swift */; };
+		09CBF0441E80816F00F8CF04 /* ResourceMO+Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CBF0431E80816F00F8CF04 /* ResourceMO+Attributes.swift */; };
 		09D96BEF1E6E0B5B006FD491 /* Workspaces.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 09D96BED1E6E0B5B006FD491 /* Workspaces.xcdatamodeld */; };
 		09E1517E1E6C70E000710002 /* Properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E1517C1E6C70E000710002 /* Properties.swift */; };
 		09E1517F1E6C70E000710002 /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E1517D1E6C70E000710002 /* Property.swift */; };
@@ -32,12 +38,18 @@
 		0968F77B1E6C66E600B9B3AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0968F7841E6C6B1600B9B3AD /* CoreDataModels */ = {isa = PBXFileReference; lastKnownFileType = folder; name = CoreDataModels; path = /Users/danielsumara/Documents/Projekty/Internationalizer/Models/Models/CoreDataModels; sourceTree = "<absolute>"; };
 		0968F7861E6C6B8800B9B3AD /* RawModels */ = {isa = PBXFileReference; lastKnownFileType = folder; name = RawModels; path = /Users/danielsumara/Documents/Projekty/Internationalizer/Models/Models/RawModels; sourceTree = "<absolute>"; };
-		09AD02BF1E6F589D0024444D /* PropertyMO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyMO.swift; sourceTree = "<group>"; };
 		09AD02C11E6F58B50024444D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		09AD02C31E6F592C0024444D /* LocalizationMO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizationMO.swift; sourceTree = "<group>"; };
-		09AD02C51E6F5FDE0024444D /* ResourceMO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourceMO.swift; sourceTree = "<group>"; };
-		09AD02C71E6F61770024444D /* ProjectMO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectMO.swift; sourceTree = "<group>"; };
 		09C48D911E748D0B00BCA91B /* RepositoryContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryContext.swift; sourceTree = "<group>"; };
+		09CBF0261E8066FC00F8CF04 /* NSManagedObjectExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSManagedObjectExtensions.swift; sourceTree = "<group>"; };
+		09CBF0281E806CBB00F8CF04 /* RepositoryFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryFactory.swift; sourceTree = "<group>"; };
+		09CBF0341E80813600F8CF04 /* LocalizationMO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizationMO.swift; sourceTree = "<group>"; };
+		09CBF0351E80813600F8CF04 /* ProjectMO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectMO.swift; sourceTree = "<group>"; };
+		09CBF0361E80813600F8CF04 /* PropertyMO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyMO.swift; sourceTree = "<group>"; };
+		09CBF0381E80813600F8CF04 /* ResourceMO+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ResourceMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		09CBF0391E80813600F8CF04 /* ResourceMO+Kind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ResourceMO+Kind.swift"; sourceTree = "<group>"; };
+		09CBF03A1E80813600F8CF04 /* ResourceMO+KindExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ResourceMO+KindExtensions.swift"; sourceTree = "<group>"; };
+		09CBF03B1E80813600F8CF04 /* ResourceMO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourceMO.swift; sourceTree = "<group>"; };
+		09CBF0431E80816F00F8CF04 /* ResourceMO+Attributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ResourceMO+Attributes.swift"; sourceTree = "<group>"; };
 		09D96BEE1E6E0B5B006FD491 /* Workspaces.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Workspaces.xcdatamodel; sourceTree = "<group>"; };
 		09E1517C1E6C70E000710002 /* Properties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Properties.swift; sourceTree = "<group>"; };
 		09E1517D1E6C70E000710002 /* Property.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
@@ -81,8 +93,9 @@
 		0968F7791E6C66E600B9B3AD /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				09E151791E6C70DA00710002 /* CoreDataModels */,
+				09CBF0331E80813600F8CF04 /* CoreDataModels */,
 				09C48D901E748CD000BCA91B /* DataContexts */,
+				09CBF0241E8066C700F8CF04 /* Extensions */,
 				09E1517A1E6C70E000710002 /* RawModels */,
 				09D96BEC1E6E0ACF006FD491 /* Resources */,
 				0968F7821E6C670F00B9B3AD /* SupportFiles */,
@@ -103,8 +116,48 @@
 			isa = PBXGroup;
 			children = (
 				09C48D911E748D0B00BCA91B /* RepositoryContext.swift */,
+				09CBF0281E806CBB00F8CF04 /* RepositoryFactory.swift */,
 			);
 			path = DataContexts;
+			sourceTree = "<group>";
+		};
+		09CBF0241E8066C700F8CF04 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				09CBF0251E8066E100F8CF04 /* CoreData */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		09CBF0251E8066E100F8CF04 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				09CBF0261E8066FC00F8CF04 /* NSManagedObjectExtensions.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		09CBF0331E80813600F8CF04 /* CoreDataModels */ = {
+			isa = PBXGroup;
+			children = (
+				09CBF0341E80813600F8CF04 /* LocalizationMO.swift */,
+				09CBF0351E80813600F8CF04 /* ProjectMO.swift */,
+				09CBF0361E80813600F8CF04 /* PropertyMO.swift */,
+				09CBF0371E80813600F8CF04 /* Resources */,
+			);
+			path = CoreDataModels;
+			sourceTree = "<group>";
+		};
+		09CBF0371E80813600F8CF04 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				09CBF03B1E80813600F8CF04 /* ResourceMO.swift */,
+				09CBF0431E80816F00F8CF04 /* ResourceMO+Attributes.swift */,
+				09CBF0381E80813600F8CF04 /* ResourceMO+CoreDataProperties.swift */,
+				09CBF0391E80813600F8CF04 /* ResourceMO+Kind.swift */,
+				09CBF03A1E80813600F8CF04 /* ResourceMO+KindExtensions.swift */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		09D96BEC1E6E0ACF006FD491 /* Resources */ = {
@@ -113,17 +166,6 @@
 				09D96BED1E6E0B5B006FD491 /* Workspaces.xcdatamodeld */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		09E151791E6C70DA00710002 /* CoreDataModels */ = {
-			isa = PBXGroup;
-			children = (
-				09AD02C31E6F592C0024444D /* LocalizationMO.swift */,
-				09AD02C71E6F61770024444D /* ProjectMO.swift */,
-				09AD02BF1E6F589D0024444D /* PropertyMO.swift */,
-				09AD02C51E6F5FDE0024444D /* ResourceMO.swift */,
-			);
-			path = CoreDataModels;
 			sourceTree = "<group>";
 		};
 		09E1517A1E6C70E000710002 /* RawModels */ = {
@@ -249,15 +291,21 @@
 				09E151E01E6C747D00710002 /* ProjectKind.swift in Sources */,
 				09E1517F1E6C70E000710002 /* Property.swift in Sources */,
 				09E151D31E6C73D700710002 /* Resource.swift in Sources */,
+				09CBF0271E8066FC00F8CF04 /* NSManagedObjectExtensions.swift in Sources */,
 				09E1517E1E6C70E000710002 /* Properties.swift in Sources */,
-				09AD02C01E6F589D0024444D /* PropertyMO.swift in Sources */,
-				09AD02C81E6F61770024444D /* ProjectMO.swift in Sources */,
-				09AD02C61E6F5FDE0024444D /* ResourceMO.swift in Sources */,
+				09CBF0421E80813600F8CF04 /* ResourceMO.swift in Sources */,
+				09CBF03F1E80813600F8CF04 /* ResourceMO+CoreDataProperties.swift in Sources */,
+				09CBF03D1E80813600F8CF04 /* ProjectMO.swift in Sources */,
+				09CBF03C1E80813600F8CF04 /* LocalizationMO.swift in Sources */,
+				09CBF0291E806CBB00F8CF04 /* RepositoryFactory.swift in Sources */,
+				09CBF0441E80816F00F8CF04 /* ResourceMO+Attributes.swift in Sources */,
+				09CBF0401E80813600F8CF04 /* ResourceMO+Kind.swift in Sources */,
 				09C48D921E748D0B00BCA91B /* RepositoryContext.swift in Sources */,
+				09CBF03E1E80813600F8CF04 /* PropertyMO.swift in Sources */,
 				09D96BEF1E6E0B5B006FD491 /* Workspaces.xcdatamodeld in Sources */,
-				09AD02C41E6F592C0024444D /* LocalizationMO.swift in Sources */,
 				09E151D21E6C73D700710002 /* Project.swift in Sources */,
 				09E151E11E6C747D00710002 /* ResourceKind.swift in Sources */,
+				09CBF0411E80813600F8CF04 /* ResourceMO+KindExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

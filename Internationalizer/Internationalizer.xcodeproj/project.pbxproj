@@ -22,7 +22,6 @@
 		09377B1C1E5A4C8800BE52EE /* StringsGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09377B1B1E5A4C8800BE52EE /* StringsGridViewController.swift */; };
 		098A2E231E59BB8B00BD26CB /* ProjectsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098A2E221E59BB8B00BD26CB /* ProjectsRepository.swift */; };
 		098A2E261E59CB8100BD26CB /* InternationalizerViewsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098A2E251E59CB8100BD26CB /* InternationalizerViewsController.swift */; };
-		098A2E291E59D94C00BD26CB /* OperationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098A2E281E59D94C00BD26CB /* OperationResult.swift */; };
 		09CD18BB1E560A9600CA7C41 /* ProjectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CD18BA1E560A9600CA7C41 /* ProjectViewModel.swift */; };
 		09CD18BD1E560AA900CA7C41 /* ResourceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CD18BC1E560AA900CA7C41 /* ResourceViewModel.swift */; };
 		09CD18C81E565CDB00CA7C41 /* R.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CD18C71E565CDB00CA7C41 /* R.swift */; };
@@ -92,7 +91,6 @@
 		09377B1B1E5A4C8800BE52EE /* StringsGridViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringsGridViewController.swift; sourceTree = "<group>"; };
 		098A2E221E59BB8B00BD26CB /* ProjectsRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsRepository.swift; sourceTree = "<group>"; };
 		098A2E251E59CB8100BD26CB /* InternationalizerViewsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InternationalizerViewsController.swift; sourceTree = "<group>"; };
-		098A2E281E59D94C00BD26CB /* OperationResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationResult.swift; sourceTree = "<group>"; };
 		09CD18BA1E560A9600CA7C41 /* ProjectViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectViewModel.swift; sourceTree = "<group>"; };
 		09CD18BC1E560AA900CA7C41 /* ResourceViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourceViewModel.swift; sourceTree = "<group>"; };
 		09CD18C71E565CDB00CA7C41 /* R.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.swift; sourceTree = "<group>"; };
@@ -155,7 +153,6 @@
 		091B3BAD1E54DD6B0033A6E7 /* Internationalizer */ = {
 			isa = PBXGroup;
 			children = (
-				09CD18C31E56545700CA7C41 /* Infrastructure */,
 				091B3BDA1E54F5EA0033A6E7 /* Models */,
 				091B3BD61E54F4C50033A6E7 /* Modules */,
 				091B3BCB1E54DD8E0033A6E7 /* Resouarces */,
@@ -332,22 +329,6 @@
 			path = Internationalizer;
 			sourceTree = "<group>";
 		};
-		098A2E271E59D8F500BD26CB /* Enums */ = {
-			isa = PBXGroup;
-			children = (
-				098A2E281E59D94C00BD26CB /* OperationResult.swift */,
-			);
-			path = Enums;
-			sourceTree = "<group>";
-		};
-		09CD18C31E56545700CA7C41 /* Infrastructure */ = {
-			isa = PBXGroup;
-			children = (
-				098A2E271E59D8F500BD26CB /* Enums */,
-			);
-			path = Infrastructure;
-			sourceTree = "<group>";
-		};
 		09CD18C91E565E3400CA7C41 /* Contracts */ = {
 			isa = PBXGroup;
 			children = (
@@ -515,7 +496,6 @@
 			files = (
 				09E5E8881E6618D000BD44B5 /* FileReader.swift in Sources */,
 				09EEB9AE1E5B5C2500827C9D /* FieldCell.swift in Sources */,
-				098A2E291E59D94C00BD26CB /* OperationResult.swift in Sources */,
 				09CD18C81E565CDB00CA7C41 /* R.swift in Sources */,
 				09CD18BB1E560A9600CA7C41 /* ProjectViewModel.swift in Sources */,
 				091B3BD91E54F5090033A6E7 /* ProjectsListViewController.swift in Sources */,

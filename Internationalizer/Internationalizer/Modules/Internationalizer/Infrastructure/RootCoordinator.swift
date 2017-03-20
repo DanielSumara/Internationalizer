@@ -17,6 +17,8 @@ class RootCoordinator {
     
     fileprivate var projectRepository: ProjectsRepository = ProjectsRepository()
     
+    fileprivate var repository: RepositoryContext!
+    
     // MARK:- Lifecycle
     
     init(with list: ProjectsListView, and details: ResourceDetailsView) {
@@ -27,7 +29,20 @@ class RootCoordinator {
     // MARK:- API
     
     func start() {
-        list.viewModel = ProjectsListViewModel(from: projectRepository, with: self)
+        RepositoryFactory().createContext { result in
+            switch result {
+            case .success(let context):
+                self.repository = context
+                self.configure()
+            case .failure(let error):
+                print(error)
+                abort()
+            }
+        }
+    }
+    
+    private func configure() {
+        list.viewModel = ProjectsListViewModel(with: self, and: repository)
     }
     
 }

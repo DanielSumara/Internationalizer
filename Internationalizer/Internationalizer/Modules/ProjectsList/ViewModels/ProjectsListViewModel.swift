@@ -7,26 +7,36 @@
 //
 
 import Infrastructure
+import Models
 
-class ProjectsListViewModel {
+class ProjectsListViewModel: NSObject {
     
     // MARK:- Properties
     
     weak var view: ProjectsListView? 
     
-    fileprivate var dataSource: [ProjectViewModel]
-    
-    fileprivate let repository: ProjectsRepository
     fileprivate let coordinator: Coordinator
+    fileprivate let repository: RepositoryContext
+    
+    fileprivate var dataSource: [ProjectViewModel]
     
     // MARK:- Lifecycle
     
-    init(from repository: ProjectsRepository, with coordinator: Coordinator) {
+    init(with coordinator: Coordinator, and repository: RepositoryContext) {
         self.coordinator = coordinator
         self.repository = repository
         
-        dataSource = repository.projects.map { ProjectViewModel(from: $0) }.sorted()
+        let frc = repository.getProjects()
+        dataSource = frc.fetchedObjects?.map { ProjectViewModel(from: $0) } ?? []
+        
+        super.init()
+        
+        frc.delegate = self
     }
+    
+}
+
+extension ProjectsListViewModel: NSFetchedResultsControllerDelegate {
     
 }
 
@@ -41,16 +51,16 @@ extension ProjectsListViewModel: OutlineDataContext {
 extension ProjectsListViewModel {
     
     func addProject(from url: URL) {
-        switch repository.addProject(from: url) {
-        case .success(let newItem):
-            let newVM = ProjectViewModel(from: newItem)
-            dataSource.append(newVM)
-            dataSource.sort()
-            if let index = dataSource.index(of: newVM) {
-                view?.insert(project: newVM, at: index)
-            }
-        case .failure(let error): print("Shit happens: \(error)"); break // TODO: - Handler error
-        }
+//        switch repository.addProject(from: url) {
+//        case .success(let newItem):
+//            let newVM = ProjectViewModel(from: newItem)
+//            dataSource.append(newVM)
+//            dataSource.sort()
+//            if let index = dataSource.index(of: newVM) {
+//                view?.insert(project: newVM, at: index)
+//            }
+//        case .failure(let error): print("Shit happens: \(error)"); break // TODO: - Handler error
+//        }
     }
 
     func showDetails(for item: Any?) {
@@ -59,7 +69,7 @@ extension ProjectsListViewModel {
             return
         }
         
-        coordinator.showDetails(for: item.model)
+//        coordinator.showDetails(for: item.model)
     }
     
 }

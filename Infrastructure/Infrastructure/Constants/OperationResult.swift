@@ -10,7 +10,7 @@ import Foundation
 
 public enum OperationResult<ResultType> {
     
-    case success(data: ResultType)
+    case success(with: ResultType)
     case failure(with: Error)
     
 }

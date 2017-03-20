@@ -13,19 +13,19 @@ class ResourceViewModel {
     // MARK:- Properties
     
     let name: String
-    let kind: ResourceKind
+    let kind: ResourceMO.Kind
     let paths: [URL]
     
-    fileprivate let resource: Resource
+    fileprivate let resource: ResourceMO
     
     // MARK:- Lifecycle
     
-    init(from resource: Resource) {
+    init(from resource: ResourceMO) {
         self.resource = resource
         
         name = resource.name
         kind = resource.kind
-        paths = resource.paths
+        paths = [] //resource.paths
     }
     
 }
@@ -44,7 +44,7 @@ extension ResourceViewModel: NavigatorItem {
 
 extension ResourceViewModel {
     
-    var model: Resource { return resource }
+    var model: ResourceMO { return resource }
     
 }
 

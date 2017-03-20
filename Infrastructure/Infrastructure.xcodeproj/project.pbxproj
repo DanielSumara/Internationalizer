@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09CBF02B1E8074FF00F8CF04 /* OperationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CBF02A1E8074FF00F8CF04 /* OperationResult.swift */; };
 		09E151941E6C712700710002 /* Infrastructure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09E1518A1E6C712700710002 /* Infrastructure.framework */; };
 		09E151991E6C712700710002 /* InfrastructureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E151981E6C712700710002 /* InfrastructureTests.swift */; };
 		09E1519B1E6C712700710002 /* Infrastructure.h in Headers */ = {isa = PBXBuildFile; fileRef = 09E1518D1E6C712700710002 /* Infrastructure.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		09CBF02A1E8074FF00F8CF04 /* OperationResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationResult.swift; sourceTree = "<group>"; };
 		09E1518A1E6C712700710002 /* Infrastructure.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Infrastructure.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		09E1518D1E6C712700710002 /* Infrastructure.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Infrastructure.h; sourceTree = "<group>"; };
 		09E1518E1E6C712700710002 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				09E151E31E6C764F00710002 /* Constants.swift */,
+				09CBF02A1E8074FF00F8CF04 /* OperationResult.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09CBF02B1E8074FF00F8CF04 /* OperationResult.swift in Sources */,
 				09E151E81E6C766100710002 /* MvvmView.swift in Sources */,
 				09E151E91E6C766100710002 /* OutlineDataContext.swift in Sources */,
 				09E151E41E6C764F00710002 /* Constants.swift in Sources */,
@@ -441,6 +445,7 @@
 				09E151A01E6C712700710002 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		09E151A11E6C712700710002 /* Build configuration list for PBXNativeTarget "InfrastructureTests" */ = {
 			isa = XCConfigurationList;
@@ -449,6 +454,7 @@
 				09E151A31E6C712700710002 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

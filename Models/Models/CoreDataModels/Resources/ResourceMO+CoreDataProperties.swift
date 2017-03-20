@@ -1,28 +1,10 @@
 //
-//  ResourceMO.swift
+//  ResourceMO+CoreDataProperties.swift
 //  Models
 //
-//  Created by Daniel Sumara on 07.03.2017.
+//  Created by Daniel Sumara on 20.03.2017.
 //  Copyright © 2017 Daniel Sumara. All rights reserved.
 //
-
-import Foundation
-
-public class ResourceMO: NSManagedObject {
-    
-}
-
-public extension ResourceMO {
-    
-    public enum Kind: String {
-        
-        case storyboard
-        case strings
-        case xib
-        
-    }
-    
-}
 
 public extension ResourceMO {
     
@@ -52,24 +34,6 @@ public extension ResourceMO {
             defer { didChangeValue(forKey: Attribute.kind.name) }
             primitiveKind = newValue.rawValue
         }
-    }
-    
-}
-
-extension ResourceMO {
-    
-    enum Attribute {
-        
-        // MARK:- Properties
-        
-        static let name: (name: String, type: String.Type) = ("name", String.self)
-        static let kind: (name: String, type: String.Type) = ("kind", String.self)
-        
-        // MARK:- Relations
-        
-        static let localizations: (name: String, type: Set<LocalizationMO>.Type) = ("localizations", Set<LocalizationMO>.self)
-        static let owner: (name: String, type: ProjectMO.Type) = ("owner", ProjectMO.self)
-        
     }
     
 }

@@ -15,14 +15,14 @@ class ProjectViewModel {
     
     let name: String
     let path: URL
-    let kind: ProjectKind
+    let kind: ProjectMO.Kind
     let resources: [ResourceViewModel]
     
-    fileprivate let project: Project
+    fileprivate let project: ProjectMO
     
     // MARK:- Lifecycle
     
-    init(from project: Project) {
+    init(from project: ProjectMO) {
         self.project = project
         
         name = project.name

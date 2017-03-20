@@ -6,6 +6,7 @@
 //  Copyright © 2017 Daniel Sumara. All rights reserved.
 //
 
+import Infrastructure
 import Models
 
 public class ProjectsRepository {
@@ -42,7 +43,7 @@ public class ProjectsRepository {
         
         projectsSet.insert(project)
         
-        return .success(data: project)
+        return .success(with: project)
     }
     
 }
