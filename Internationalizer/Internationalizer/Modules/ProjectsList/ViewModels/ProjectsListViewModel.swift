@@ -17,6 +17,7 @@ class ProjectsListViewModel: NSObject {
     
     fileprivate let coordinator: Coordinator
     fileprivate let repository: RepositoryContext
+    fileprivate let fetchedResultController: NSFetchedResultsController<ProjectMO>
     
     fileprivate var dataSource: [ProjectViewModel]
     
@@ -26,17 +27,35 @@ class ProjectsListViewModel: NSObject {
         self.coordinator = coordinator
         self.repository = repository
         
-        let frc = repository.getProjects()
-        dataSource = frc.fetchedObjects?.map { ProjectViewModel(from: $0) } ?? []
+        fetchedResultController = repository.getProjects()
+        do {
+            try fetchedResultController.performFetch()
+            dataSource = fetchedResultController.fetchedObjects?.map { ProjectViewModel(from: $0) } ?? []
+        } catch {
+            print(error)
+            dataSource = []
+        }
         
         super.init()
         
-        frc.delegate = self
+        fetchedResultController.delegate = self
     }
     
 }
 
 extension ProjectsListViewModel: NSFetchedResultsControllerDelegate {
+    
+    func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        print("frc will change")
+    }
+    
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        print("frc did \(type) object")
+    }
+    
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        print("frc did change")
+    }
     
 }
 
@@ -51,6 +70,7 @@ extension ProjectsListViewModel: OutlineDataContext {
 extension ProjectsListViewModel {
     
     func addProject(from url: URL) {
+        repository.addProject(from: url)
 //        switch repository.addProject(from: url) {
 //        case .success(let newItem):
 //            let newVM = ProjectViewModel(from: newItem)

@@ -20,7 +20,6 @@
     <entity name="ResourceMO" representedClassName=".ResourceMO" syncable="YES">
         <attribute name="kind" attributeType="String" syncable="YES"/>
         <attribute name="name" attributeType="String" syncable="YES"/>
-        <attribute name="path" attributeType="String" syncable="YES"/>
         <relationship name="localizations" toMany="YES" deletionRule="Cascade" destinationEntity="LocalizationMO" inverseName="owner" inverseEntity="LocalizationMO" syncable="YES"/>
         <relationship name="owner" maxCount="1" deletionRule="Nullify" destinationEntity="ProjectMO" inverseName="resources" inverseEntity="ProjectMO" syncable="YES"/>
     </entity>
@@ -28,6 +27,6 @@
         <element name="LocalizationMO" positionX="-20" positionY="-81" width="128" height="103"/>
         <element name="ProjectMO" positionX="-225" positionY="-240" width="128" height="103"/>
         <element name="PropertyMO" positionX="-11" positionY="72" width="128" height="88"/>
-        <element name="ResourceMO" positionX="-27" positionY="-243" width="128" height="118"/>
+        <element name="ResourceMO" positionX="-27" positionY="-243" width="128" height="105"/>
     </elements>
 </model>

@@ -37,11 +37,8 @@
 		09E5E8801E66146200BD44B5 /* StringsGridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E5E87F1E66146200BD44B5 /* StringsGridViewModel.swift */; };
 		09E5E8831E66167600BD44B5 /* StringsLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E5E8821E66167600BD44B5 /* StringsLine.swift */; };
 		09E5E8851E6616BC00BD44B5 /* StringsFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E5E8841E6616BC00BD44B5 /* StringsFile.swift */; };
-		09E5E8881E6618D000BD44B5 /* FileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E5E8871E6618D000BD44B5 /* FileReader.swift */; };
-		09E5E88B1E661CFB00BD44B5 /* StringsPropertiesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E5E88A1E661CFB00BD44B5 /* StringsPropertiesFactory.swift */; };
 		09E5E88E1E662BCA00BD44B5 /* StringsGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E5E88D1E662BCA00BD44B5 /* StringsGridView.swift */; };
 		09EEB9AE1E5B5C2500827C9D /* FieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EEB9AD1E5B5C2500827C9D /* FieldCell.swift */; };
-		09F6A0F81E59EFBF0049E16E /* ProjectBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F6A0F71E59EFBF0049E16E /* ProjectBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,11 +99,8 @@
 		09E5E87F1E66146200BD44B5 /* StringsGridViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringsGridViewModel.swift; sourceTree = "<group>"; };
 		09E5E8821E66167600BD44B5 /* StringsLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringsLine.swift; sourceTree = "<group>"; };
 		09E5E8841E6616BC00BD44B5 /* StringsFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringsFile.swift; sourceTree = "<group>"; };
-		09E5E8871E6618D000BD44B5 /* FileReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileReader.swift; sourceTree = "<group>"; };
-		09E5E88A1E661CFB00BD44B5 /* StringsPropertiesFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringsPropertiesFactory.swift; sourceTree = "<group>"; };
 		09E5E88D1E662BCA00BD44B5 /* StringsGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringsGridView.swift; sourceTree = "<group>"; };
 		09EEB9AD1E5B5C2500827C9D /* FieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldCell.swift; sourceTree = "<group>"; };
-		09F6A0F71E59EFBF0049E16E /* ProjectBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,7 +151,6 @@
 				091B3BD61E54F4C50033A6E7 /* Modules */,
 				091B3BCB1E54DD8E0033A6E7 /* Resouarces */,
 				091B3BCE1E54DE420033A6E7 /* SupportFiles */,
-				09E5E8861E6618A700BD44B5 /* Utilities */,
 			);
 			path = Internationalizer;
 			sourceTree = "<group>";
@@ -314,7 +307,6 @@
 			isa = PBXGroup;
 			children = (
 				098A2E221E59BB8B00BD26CB /* ProjectsRepository.swift */,
-				09F6A0F71E59EFBF0049E16E /* ProjectBuilder.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -343,25 +335,8 @@
 			children = (
 				09E5E8841E6616BC00BD44B5 /* StringsFile.swift */,
 				09E5E8821E66167600BD44B5 /* StringsLine.swift */,
-				09E5E8891E661CE100BD44B5 /* Factories */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		09E5E8861E6618A700BD44B5 /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				09E5E8871E6618D000BD44B5 /* FileReader.swift */,
-			);
-			path = Utilities;
-			sourceTree = "<group>";
-		};
-		09E5E8891E661CE100BD44B5 /* Factories */ = {
-			isa = PBXGroup;
-			children = (
-				09E5E88A1E661CFB00BD44B5 /* StringsPropertiesFactory.swift */,
-			);
-			path = Factories;
 			sourceTree = "<group>";
 		};
 		09E5E88C1E662BAE00BD44B5 /* Contracts */ = {
@@ -494,7 +469,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09E5E8881E6618D000BD44B5 /* FileReader.swift in Sources */,
 				09EEB9AE1E5B5C2500827C9D /* FieldCell.swift in Sources */,
 				09CD18C81E565CDB00CA7C41 /* R.swift in Sources */,
 				09CD18BB1E560A9600CA7C41 /* ProjectViewModel.swift in Sources */,
@@ -509,13 +483,11 @@
 				098A2E261E59CB8100BD26CB /* InternationalizerViewsController.swift in Sources */,
 				09E5E8851E6616BC00BD44B5 /* StringsFile.swift in Sources */,
 				09377B131E5A386C00BE52EE /* RootCoordinator.swift in Sources */,
-				09F6A0F81E59EFBF0049E16E /* ProjectBuilder.swift in Sources */,
 				09377B1C1E5A4C8800BE52EE /* StringsGridViewController.swift in Sources */,
 				098A2E231E59BB8B00BD26CB /* ProjectsRepository.swift in Sources */,
 				09CD18CB1E565E6300CA7C41 /* NavigatorItem.swift in Sources */,
 				09E5E88E1E662BCA00BD44B5 /* StringsGridView.swift in Sources */,
 				09377B0D1E5A34AB00BE52EE /* ResourceDetailsViewController.swift in Sources */,
-				09E5E88B1E661CFB00BD44B5 /* StringsPropertiesFactory.swift in Sources */,
 				090916461E6AC1FC003CBEA6 /* StringsViewModel.swift in Sources */,
 				09E5E8801E66146200BD44B5 /* StringsGridViewModel.swift in Sources */,
 			);

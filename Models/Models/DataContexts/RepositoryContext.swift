@@ -28,4 +28,9 @@ public class RepositoryContext {
         return NSFetchedResultsController<ProjectMO>(fetchRequest: request, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
     }
     
+    public func addProject(from url: URL) {
+        ProjectBuilder(for: url, using: context).build()
+        try! context.save()
+    }
+    
 }

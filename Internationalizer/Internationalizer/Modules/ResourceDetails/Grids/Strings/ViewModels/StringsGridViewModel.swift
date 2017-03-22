@@ -26,10 +26,11 @@ class StringsGridViewModel {
     init(from resource: Resource) {
         self.resource = resource
         
-        let builder = StringsPropertiesFactory()
-        files = resource.paths.map { builder.create(from: $0) }.toDictionary { ($0.name, $0) }
-        mapping = files.values.sorted().toDictionary { ($1, $0.name) }
-        keys = Array(Set(files.values.flatMap { $0.keys }))
+//        let builder = StringsPropertiesFactory()
+//        files = resource.paths.map { builder.create(from: $0) }.toDictionary { ($0.name, $0) }
+        files = [:]
+        mapping = [:] // = files.values.sorted().toDictionary { ($1, $0.name) }
+        keys = [] // Array(Set(files.values.flatMap { $0.keys }))
     }
     
     deinit {

@@ -29,21 +29,22 @@ public class ProjectsRepository {
         let url = projectUrl.deletingLastPathComponent()
         guard let iterator = FileManager.default.enumerator(at: url, includingPropertiesForKeys: nil) else { return .failure(with: NSError()) }
         
-        let resourcePaths = iterator.map { $0 as! URL}
-            .filter { !$0.hasDirectoryPath }
-            .filter { ResourceKind.isResource($0.pathExtension) }
+//        let resourcePaths = iterator.map { $0 as! URL}
+//            .filter { !$0.hasDirectoryPath }
+//            .filter { ResourceKind.isResource($0.pathExtension) }
 
-        let builder = ProjectBuilder(for: projectUrl)
-        resourcePaths.forEach { builder.add(path: $0) }
-        
-        let project = builder.build()
-        
-        // TODO: - Create valid error object
-        guard !projectsSet.contains(project) else { return .failure(with: NSError(domain: "", code: -1, userInfo: nil)) }
-        
-        projectsSet.insert(project)
-        
-        return .success(with: project)
+        return .failure(with: NSError())
+//        let builder = ProjectBuilder(for: projectUrl)
+//        resourcePaths.forEach { builder.add(path: $0) }
+//        
+//        let project = builder.build()
+//        
+//        // TODO: - Create valid error object
+//        guard !projectsSet.contains(project) else { return .failure(with: NSError(domain: "", code: -1, userInfo: nil)) }
+//        
+//        projectsSet.insert(project)
+//        
+//        return .success(with: project)
     }
     
 }
