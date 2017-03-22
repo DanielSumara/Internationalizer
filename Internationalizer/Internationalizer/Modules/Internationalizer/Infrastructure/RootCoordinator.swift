@@ -15,8 +15,6 @@ class RootCoordinator {
     fileprivate weak var list: ProjectsListView!
     fileprivate weak var details: ResourceDetailsView!
     
-    fileprivate var projectRepository: ProjectsRepository = ProjectsRepository()
-    
     fileprivate var repository: RepositoryContext!
     
     // MARK:- Lifecycle

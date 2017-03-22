@@ -24,7 +24,6 @@ public final class WatchDog {
     
     deinit {
         let diff = Date().timeIntervalSince(created)
-        
         print("WatchDog[\(getName())] stopped after: \(diff) seconds")
     }
     

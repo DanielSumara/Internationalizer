@@ -71,16 +71,6 @@ extension ProjectsListViewModel {
     
     func addProject(from url: URL) {
         repository.addProject(from: url)
-//        switch repository.addProject(from: url) {
-//        case .success(let newItem):
-//            let newVM = ProjectViewModel(from: newItem)
-//            dataSource.append(newVM)
-//            dataSource.sort()
-//            if let index = dataSource.index(of: newVM) {
-//                view?.insert(project: newVM, at: index)
-//            }
-//        case .failure(let error): print("Shit happens: \(error)"); break // TODO: - Handler error
-//        }
     }
 
     func showDetails(for item: Any?) {

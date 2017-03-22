@@ -20,7 +20,6 @@
 		09377B131E5A386C00BE52EE /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09377B121E5A386C00BE52EE /* RootCoordinator.swift */; };
 		09377B161E5A3BCC00BE52EE /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09377B151E5A3BCC00BE52EE /* Coordinator.swift */; };
 		09377B1C1E5A4C8800BE52EE /* StringsGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09377B1B1E5A4C8800BE52EE /* StringsGridViewController.swift */; };
-		098A2E231E59BB8B00BD26CB /* ProjectsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098A2E221E59BB8B00BD26CB /* ProjectsRepository.swift */; };
 		098A2E261E59CB8100BD26CB /* InternationalizerViewsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098A2E251E59CB8100BD26CB /* InternationalizerViewsController.swift */; };
 		09CD18BB1E560A9600CA7C41 /* ProjectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CD18BA1E560A9600CA7C41 /* ProjectViewModel.swift */; };
 		09CD18BD1E560AA900CA7C41 /* ResourceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CD18BC1E560AA900CA7C41 /* ResourceViewModel.swift */; };
@@ -86,7 +85,6 @@
 		09377B121E5A386C00BE52EE /* RootCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
 		09377B151E5A3BCC00BE52EE /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		09377B1B1E5A4C8800BE52EE /* StringsGridViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringsGridViewController.swift; sourceTree = "<group>"; };
-		098A2E221E59BB8B00BD26CB /* ProjectsRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsRepository.swift; sourceTree = "<group>"; };
 		098A2E251E59CB8100BD26CB /* InternationalizerViewsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InternationalizerViewsController.swift; sourceTree = "<group>"; };
 		09CD18BA1E560A9600CA7C41 /* ProjectViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectViewModel.swift; sourceTree = "<group>"; };
 		09CD18BC1E560AA900CA7C41 /* ResourceViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourceViewModel.swift; sourceTree = "<group>"; };
@@ -207,7 +205,6 @@
 		091B3BDA1E54F5EA0033A6E7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				098A2E211E59BB6300BD26CB /* Repository */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -301,14 +298,6 @@
 				09E152031E6C771600710002 /* UI.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		098A2E211E59BB6300BD26CB /* Repository */ = {
-			isa = PBXGroup;
-			children = (
-				098A2E221E59BB8B00BD26CB /* ProjectsRepository.swift */,
-			);
-			path = Repository;
 			sourceTree = "<group>";
 		};
 		098A2E241E59CB2A00BD26CB /* Internationalizer */ = {
@@ -484,7 +473,6 @@
 				09E5E8851E6616BC00BD44B5 /* StringsFile.swift in Sources */,
 				09377B131E5A386C00BE52EE /* RootCoordinator.swift in Sources */,
 				09377B1C1E5A4C8800BE52EE /* StringsGridViewController.swift in Sources */,
-				098A2E231E59BB8B00BD26CB /* ProjectsRepository.swift in Sources */,
 				09CD18CB1E565E6300CA7C41 /* NavigatorItem.swift in Sources */,
 				09E5E88E1E662BCA00BD44B5 /* StringsGridView.swift in Sources */,
 				09377B0D1E5A34AB00BE52EE /* ResourceDetailsViewController.swift in Sources */,
