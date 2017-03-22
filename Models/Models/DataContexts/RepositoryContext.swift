@@ -7,6 +7,7 @@
 //
 
 import CoreData
+import Infrastructure
 
 public class RepositoryContext {
     
@@ -29,6 +30,7 @@ public class RepositoryContext {
     }
     
     public func addProject(from url: URL) {
+        let watchDog = WatchDog(named: "Create and save project")
         ProjectBuilder(for: url, using: context).build()
         try! context.save()
     }
