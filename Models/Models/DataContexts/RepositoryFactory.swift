@@ -17,15 +17,13 @@ public class RepositoryFactory {
     lazy private var persistentStoreCoordinator: NSPersistentStoreCoordinator = self.createCoordinator()
     lazy private var managedObjectContext: NSManagedObjectContext = self.createContext()
     
+    private let watchDog = WatchDog()
+    
     // MARK:- Lifecycle
 
     /// NOTE:- Do not capture factory reference otherwise cycle will appear and memory leak
     public init() {
-        print("\(String(describing: self)) inited at: \(Date().timeIntervalSince1970)")
-    }
-    
-    deinit {
-        print("\(String(describing: self)) deinited at: \(Date().timeIntervalSince1970)")
+        
     }
     
     // MARK:- API

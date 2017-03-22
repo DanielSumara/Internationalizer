@@ -14,6 +14,7 @@
 		09E151E41E6C764F00710002 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E151E31E6C764F00710002 /* Constants.swift */; };
 		09E151E81E6C766100710002 /* MvvmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E151E61E6C766100710002 /* MvvmView.swift */; };
 		09E151E91E6C766100710002 /* OutlineDataContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E151E71E6C766100710002 /* OutlineDataContext.swift */; };
+		09F6B9D81E82FB850028819F /* WatchDog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F6B9D71E82FB850028819F /* WatchDog.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +38,7 @@
 		09E151E31E6C764F00710002 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		09E151E61E6C766100710002 /* MvvmView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MvvmView.swift; sourceTree = "<group>"; };
 		09E151E71E6C766100710002 /* OutlineDataContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutlineDataContext.swift; sourceTree = "<group>"; };
+		09F6B9D71E82FB850028819F /* WatchDog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchDog.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				09E151E21E6C764F00710002 /* Constants */,
 				09E151E51E6C766100710002 /* Contracts */,
 				09E151A41E6C713E00710002 /* SupportFiles */,
+				09F6B9D61E82FB5B0028819F /* Utilities */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
@@ -120,6 +123,14 @@
 				09E151E71E6C766100710002 /* OutlineDataContext.swift */,
 			);
 			path = Contracts;
+			sourceTree = "<group>";
+		};
+		09F6B9D61E82FB5B0028819F /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				09F6B9D71E82FB850028819F /* WatchDog.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,6 +249,7 @@
 				09E151E81E6C766100710002 /* MvvmView.swift in Sources */,
 				09E151E91E6C766100710002 /* OutlineDataContext.swift in Sources */,
 				09E151E41E6C764F00710002 /* Constants.swift in Sources */,
+				09F6B9D81E82FB850028819F /* WatchDog.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
