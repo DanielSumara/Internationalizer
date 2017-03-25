@@ -15,7 +15,7 @@ public class RepositoryFactory {
     lazy private var applicationDocumentsDirectory: URL = self.getApplicationDirectory()
     lazy private var managedObjectModel: NSManagedObjectModel = self.createObjectModel()
     lazy private var persistentStoreCoordinator: NSPersistentStoreCoordinator = self.createCoordinator()
-    lazy private var managedObjectContext: NSManagedObjectContext = self.createContext()
+    lazy private var managedObjectContext: ManagedObjectContext = self.createContext()
     
     private let watchDog = WatchDog()
     
@@ -61,8 +61,8 @@ public class RepositoryFactory {
         return coordinator
     }
     
-    private func createContext() -> NSManagedObjectContext {
-        var managedObjectContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
+    private func createContext() -> ManagedObjectContext {
+        var managedObjectContext = ManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
         managedObjectContext.persistentStoreCoordinator = persistentStoreCoordinator
         return managedObjectContext
     }

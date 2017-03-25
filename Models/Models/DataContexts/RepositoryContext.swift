@@ -13,11 +13,11 @@ public class RepositoryContext {
     
     // MARK:- Properties
     
-    private let context: NSManagedObjectContext
+    private let context: ManagedObjectContext
     
     // MARK:- Lifecycle
     
-    init(with context: NSManagedObjectContext) {
+    init(with context: ManagedObjectContext) {
         self.context = context
     }
     
@@ -30,9 +30,23 @@ public class RepositoryContext {
     }
     
     public func addProject(from url: URL) {
+        if let savedProject = tryGetProject(from: url) {
+            print(savedProject.name)
+            return
+        }
         let watchDog = WatchDog(named: "Create and save project")
         ProjectBuilder(for: url, using: context).build()
         try! context.save()
+    }
+    
+    // MARK:- Methods
+    
+    private func tryGetProject(from url: URL) -> ProjectMO? {
+        let watchDog = WatchDog(named: "Fetching projects for validate")
+        let request = FetchRequest(for: ProjectMO.self)
+        request.predicate = PredicateBuilder().build(Attribute(ProjectMO.Attribute.path).isEqual(to: url.absoluteString))
+        
+        return context.fetch(using: request).first
     }
     
 }
