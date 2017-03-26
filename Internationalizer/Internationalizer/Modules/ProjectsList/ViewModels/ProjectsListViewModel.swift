@@ -50,6 +50,14 @@ extension ProjectsListViewModel: NSFetchedResultsControllerDelegate {
     }
     
     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        
+        if type == .insert {
+            let index = newIndexPath?.item ?? 0
+            let newProject = anObject as! ProjectMO
+            let viewModel = ProjectViewModel(from: newProject)
+            dataSource.insert(viewModel, at: index)
+            view?.insert(project: viewModel, at: index)
+        }
         print("frc did \(type) object")
     }
     

@@ -30,10 +30,10 @@ public class RepositoryContext {
     }
     
     public func addProject(from url: URL) {
-        if let savedProject = tryGetProject(from: url) {
-            print(savedProject.name)
-            return
-        }
+//        if let savedProject = tryGetProject(from: url) {
+//            print(savedProject.name)
+//            return
+//        }
         let watchDog = WatchDog(named: "Create and save project")
         ProjectBuilder(for: url, using: context).build()
         try! context.save()

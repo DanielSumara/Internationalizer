@@ -21,6 +21,7 @@ class ProjectsListViewController: NSViewController {
         didSet {
             viewModel.view = self
             reload()
+            outlineView.expandItem(nil, expandChildren: true)
         }
     }
     
@@ -30,7 +31,6 @@ class ProjectsListViewController: NSViewController {
         super.viewWillAppear()
         
         reload()
-        outlineView.expandItem(nil, expandChildren: true)
     }
     
     // MARK:- @IBActions
@@ -60,11 +60,13 @@ extension ProjectsListViewController: ProjectsListView {
     }
     
     func insert(project: ProjectViewModel, at index: Int) {
-        outlineView.insertItems(at: IndexSet(integer: index), inParent: nil, withAnimation: .slideDown)
-        DispatchQueue.main.async { [weak self] in
-            guard let ss = self else { return }
-            ss.outlineView.expandItem(project)
-        }
+        outlineView.beginUpdates()
+        let indexPath = IndexSet(integer: index)
+        outlineView.insertItems(at: indexPath, inParent: nil, withAnimation: .slideUp)
+        let itemIndex = IndexSet(integer: outlineView.childIndex(forItem: project))
+        outlineView.selectRowIndexes(itemIndex, byExtendingSelection: false)
+        outlineView.expandItem(project, expandChildren: true)
+        outlineView.endUpdates()
     }
     
 }
