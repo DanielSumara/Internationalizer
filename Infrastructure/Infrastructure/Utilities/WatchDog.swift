@@ -14,35 +14,61 @@ public final class WatchDog {
     
     private let created = Date()
     
+    private let file: String
     private let label: String
+    private let logLifecycle: Bool
+    
+    private var destucted: Date?
+    
+    // MARK:- Lazy properties
+    
+    private lazy var name: String = self.getName()
     
     // MARK:- Lifecycle
     
-    public init(named label: String = #file) {
+    public convenience init(logLifecycle: Bool = false, in file: String = #file) {
+        self.init(named: "", logLifecycle: logLifecycle, in: file)
+    }
+    
+    public init(named label: String, logLifecycle: Bool = false, in file: String = #file) {
+        self.logLifecycle = logLifecycle
+        self.file = file
         self.label = label
+        
+        logCreate()
     }
     
     deinit {
-        let diff = Date().timeIntervalSince(created)
-        print("WatchDog[\(getName())] stopped after: \(diff) seconds")
+        destucted = Date()
+        logLifeTime()
+        logDesctuction()
     }
     
     // MARK:- Methods
     
-    private func getName() -> String {
-        if label.contains("/") && label.contains(".") {
-            return fileNameWithoutSuffix(label)
-        }
-        return label
+    private func logCreate() {
+        guard logLifecycle else { return }
+        print("WatchDog[\(name)] created at: \(created)")
     }
     
-    /// returns the filename of a path
-    func fileNameOfFile(_ file: String) -> String {
-        let fileParts = file.components(separatedBy: "/")
-        if let lastPart = fileParts.last {
-            return lastPart
+    private func logDesctuction() {
+        guard logLifecycle else { return }
+        print("WatchDog[\(name)] destructed at: \(destucted!)")
+    }
+    
+    private func logLifeTime() {
+        let diff = destucted!.timeIntervalSince(created)
+        print("WatchDog[\(name)] lived: \(diff) seconds")
+    }
+    
+    private func getName() -> String {
+        if file.hasSuffix(".swift") {
+            if label.isEmpty {
+                return fileNameWithoutSuffix(file)
+            }
+            return fileNameWithoutSuffix(file) + ": " + label
         }
-        return ""
+        return file
     }
     
     /// returns the filename without suffix (= file ending) of a path
@@ -54,6 +80,15 @@ public final class WatchDog {
             if let firstPart = fileNameParts.first {
                 return firstPart
             }
+        }
+        return ""
+    }
+    
+    /// returns the filename of a path
+    func fileNameOfFile(_ file: String) -> String {
+        let fileParts = file.components(separatedBy: "/")
+        if let lastPart = fileParts.last {
+            return lastPart
         }
         return ""
     }
