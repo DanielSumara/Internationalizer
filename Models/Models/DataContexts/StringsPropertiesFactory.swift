@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import Models
 
 class StringsPropertiesFactory {
     

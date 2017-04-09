@@ -62,7 +62,7 @@ public class RepositoryFactory {
     }
     
     private func createContext() -> ManagedObjectContext {
-        var managedObjectContext = ManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
+        let managedObjectContext = ManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
         managedObjectContext.persistentStoreCoordinator = persistentStoreCoordinator
         return managedObjectContext
     }

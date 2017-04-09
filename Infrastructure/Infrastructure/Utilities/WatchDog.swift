@@ -12,10 +12,10 @@ public final class WatchDog {
     
     // MARK:- Properties
     
-    private let created = Date()
+    fileprivate let file: String
+    fileprivate let label: String
     
-    private let file: String
-    private let label: String
+    private let created = Date()
     private let logLifecycle: Bool
     
     private var destucted: Date?
@@ -61,7 +61,11 @@ public final class WatchDog {
         print("WatchDog[\(name)] lived: \(diff) seconds")
     }
     
-    private func getName() -> String {
+}
+
+extension WatchDog {
+    
+    fileprivate func getName() -> String {
         if file.hasSuffix(".swift") {
             if label.isEmpty {
                 return fileNameWithoutSuffix(file)
@@ -71,8 +75,7 @@ public final class WatchDog {
         return file
     }
     
-    /// returns the filename without suffix (= file ending) of a path
-    func fileNameWithoutSuffix(_ file: String) -> String {
+    private func fileNameWithoutSuffix(_ file: String) -> String {
         let fileName = fileNameOfFile(file)
         
         if !fileName.isEmpty {
@@ -84,8 +87,7 @@ public final class WatchDog {
         return ""
     }
     
-    /// returns the filename of a path
-    func fileNameOfFile(_ file: String) -> String {
+    private func fileNameOfFile(_ file: String) -> String {
         let fileParts = file.components(separatedBy: "/")
         if let lastPart = fileParts.last {
             return lastPart

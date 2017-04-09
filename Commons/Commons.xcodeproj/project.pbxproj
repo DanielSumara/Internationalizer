@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09DE7AF01E9A613500C387E9 /* Formatters+Numbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DE7AEC1E9A613500C387E9 /* Formatters+Numbers.swift */; };
+		09DE7AF11E9A613500C387E9 /* Formatters+Dates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DE7AED1E9A613500C387E9 /* Formatters+Dates.swift */; };
+		09DE7AF21E9A613500C387E9 /* Formatters+Booleans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DE7AEE1E9A613500C387E9 /* Formatters+Booleans.swift */; };
+		09DE7AF31E9A613500C387E9 /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DE7AEF1E9A613500C387E9 /* Formatters.swift */; };
 		09E151B91E6C715700710002 /* Commons.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09E151AF1E6C715700710002 /* Commons.framework */; };
 		09E151BE1E6C715700710002 /* CommonsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E151BD1E6C715700710002 /* CommonsTests.swift */; };
 		09E151C01E6C715700710002 /* Commons.h in Headers */ = {isa = PBXBuildFile; fileRef = 09E151B21E6C715700710002 /* Commons.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -24,6 +28,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		09DE7AEC1E9A613500C387E9 /* Formatters+Numbers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Formatters+Numbers.swift"; sourceTree = "<group>"; };
+		09DE7AED1E9A613500C387E9 /* Formatters+Dates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Formatters+Dates.swift"; sourceTree = "<group>"; };
+		09DE7AEE1E9A613500C387E9 /* Formatters+Booleans.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Formatters+Booleans.swift"; sourceTree = "<group>"; };
+		09DE7AEF1E9A613500C387E9 /* Formatters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
 		09E151AF1E6C715700710002 /* Commons.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Commons.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		09E151B21E6C715700710002 /* Commons.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Commons.h; sourceTree = "<group>"; };
 		09E151B31E6C715700710002 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -52,6 +60,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		09DE7AE01E9A5EB100C387E9 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				09DE7AEB1E9A611900C387E9 /* Formatters */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		09DE7AEB1E9A611900C387E9 /* Formatters */ = {
+			isa = PBXGroup;
+			children = (
+				09DE7AEF1E9A613500C387E9 /* Formatters.swift */,
+				09DE7AEE1E9A613500C387E9 /* Formatters+Booleans.swift */,
+				09DE7AED1E9A613500C387E9 /* Formatters+Dates.swift */,
+				09DE7AEC1E9A613500C387E9 /* Formatters+Numbers.swift */,
+			);
+			path = Formatters;
+			sourceTree = "<group>";
+		};
 		09E151A51E6C715700710002 = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +102,7 @@
 			children = (
 				09E151CA1E6C71BA00710002 /* Extensions */,
 				09E151C91E6C716100710002 /* SupportFiles */,
+				09DE7AE01E9A5EB100C387E9 /* Utilities */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -162,7 +190,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Daniel Sumara";
 				TargetAttributes = {
 					09E151AE1E6C715700710002 = {
@@ -218,6 +246,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				09E151CC1E6C71CC00710002 /* SequenceExtensions.swift in Sources */,
+				09DE7AF21E9A613500C387E9 /* Formatters+Booleans.swift in Sources */,
+				09DE7AF11E9A613500C387E9 /* Formatters+Dates.swift in Sources */,
+				09DE7AF31E9A613500C387E9 /* Formatters.swift in Sources */,
+				09DE7AF01E9A613500C387E9 /* Formatters+Numbers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,7 +315,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -425,6 +457,7 @@
 				09E151C51E6C715700710002 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		09E151C61E6C715700710002 /* Build configuration list for PBXNativeTarget "CommonsTests" */ = {
 			isa = XCConfigurationList;
@@ -433,6 +466,7 @@
 				09E151C81E6C715700710002 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

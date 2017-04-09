@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09957B981E9172F6001EDBDE /* Target.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09957B971E9172F6001EDBDE /* Target.swift */; };
+		09957B9D1E917BFF001EDBDE /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09957B9C1E917BFF001EDBDE /* Configuration.swift */; };
+		09957B9F1E917C24001EDBDE /* TargetConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09957B9E1E917C24001EDBDE /* TargetConfiguration.swift */; };
 		09CBF02B1E8074FF00F8CF04 /* OperationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CBF02A1E8074FF00F8CF04 /* OperationResult.swift */; };
 		09E151941E6C712700710002 /* Infrastructure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09E1518A1E6C712700710002 /* Infrastructure.framework */; };
 		09E151991E6C712700710002 /* InfrastructureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E151981E6C712700710002 /* InfrastructureTests.swift */; };
@@ -28,6 +31,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		09957B971E9172F6001EDBDE /* Target.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Target.swift; sourceTree = "<group>"; };
+		09957B9C1E917BFF001EDBDE /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		09957B9E1E917C24001EDBDE /* TargetConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetConfiguration.swift; sourceTree = "<group>"; };
 		09CBF02A1E8074FF00F8CF04 /* OperationResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationResult.swift; sourceTree = "<group>"; };
 		09E1518A1E6C712700710002 /* Infrastructure.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Infrastructure.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		09E1518D1E6C712700710002 /* Infrastructure.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Infrastructure.h; sourceTree = "<group>"; };
@@ -60,6 +66,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		09957B9B1E917BDA001EDBDE /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				09957B9C1E917BFF001EDBDE /* Configuration.swift */,
+				09957B9E1E917C24001EDBDE /* TargetConfiguration.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
 		09E151801E6C712700710002 = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +127,8 @@
 			children = (
 				09E151E31E6C764F00710002 /* Constants.swift */,
 				09CBF02A1E8074FF00F8CF04 /* OperationResult.swift */,
+				09957B971E9172F6001EDBDE /* Target.swift */,
+				09957B9B1E917BDA001EDBDE /* Configuration */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -190,7 +207,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Daniel Sumara";
 				TargetAttributes = {
 					09E151891E6C712700710002 = {
@@ -245,7 +262,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09957B981E9172F6001EDBDE /* Target.swift in Sources */,
 				09CBF02B1E8074FF00F8CF04 /* OperationResult.swift in Sources */,
+				09957B9D1E917BFF001EDBDE /* Configuration.swift in Sources */,
+				09957B9F1E917C24001EDBDE /* TargetConfiguration.swift in Sources */,
 				09E151E81E6C766100710002 /* MvvmView.swift in Sources */,
 				09E151E91E6C766100710002 /* OutlineDataContext.swift in Sources */,
 				09E151E41E6C764F00710002 /* Constants.swift in Sources */,
@@ -315,7 +335,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";

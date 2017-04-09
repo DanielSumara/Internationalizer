@@ -6,8 +6,6 @@
 //  Copyright © 2017 Daniel Sumara. All rights reserved.
 //
 
-import Models
-
 class ProjectBuilder {
     
     // MARK:- Properties

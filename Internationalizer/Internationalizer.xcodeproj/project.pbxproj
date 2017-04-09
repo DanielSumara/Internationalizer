@@ -29,8 +29,6 @@
 		09E152051E6C771600710002 /* UI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 09E152031E6C771600710002 /* UI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		09E152081E6C771F00710002 /* Commons.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09E152071E6C771F00710002 /* Commons.framework */; };
 		09E152091E6C771F00710002 /* Commons.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 09E152071E6C771F00710002 /* Commons.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		09E1520B1E6C772600710002 /* Infrastructure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09E1520A1E6C772600710002 /* Infrastructure.framework */; };
-		09E1520C1E6C772600710002 /* Infrastructure.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 09E1520A1E6C772600710002 /* Infrastructure.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		09E152101E6C774700710002 /* Models.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09E1520F1E6C774700710002 /* Models.framework */; };
 		09E152111E6C774700710002 /* Models.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 09E1520F1E6C774700710002 /* Models.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		09E5E8801E66146200BD44B5 /* StringsGridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E5E87F1E66146200BD44B5 /* StringsGridViewModel.swift */; };
@@ -38,6 +36,8 @@
 		09E5E8851E6616BC00BD44B5 /* StringsFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E5E8841E6616BC00BD44B5 /* StringsFile.swift */; };
 		09E5E88E1E662BCA00BD44B5 /* StringsGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E5E88D1E662BCA00BD44B5 /* StringsGridView.swift */; };
 		09EEB9AE1E5B5C2500827C9D /* FieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EEB9AD1E5B5C2500827C9D /* FieldCell.swift */; };
+		09FF7ED51E91870600C19260 /* Infrastructure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09E1520A1E6C772600710002 /* Infrastructure.framework */; };
+		09FF7ED61E91875B00C19260 /* Infrastructure.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 09E1520A1E6C772600710002 /* Infrastructure.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,8 +57,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				09FF7ED61E91875B00C19260 /* Infrastructure.framework in Embed Frameworks */,
 				09E152111E6C774700710002 /* Models.framework in Embed Frameworks */,
-				09E1520C1E6C772600710002 /* Infrastructure.framework in Embed Frameworks */,
 				09E152051E6C771600710002 /* UI.framework in Embed Frameworks */,
 				09E152091E6C771F00710002 /* Commons.framework in Embed Frameworks */,
 			);
@@ -106,8 +106,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09FF7ED51E91870600C19260 /* Infrastructure.framework in Frameworks */,
 				09E152101E6C774700710002 /* Models.framework in Frameworks */,
-				09E1520B1E6C772600710002 /* Infrastructure.framework in Frameworks */,
 				09E152041E6C771600710002 /* UI.framework in Frameworks */,
 				09E152081E6C771F00710002 /* Commons.framework in Frameworks */,
 			);
@@ -596,6 +596,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = HJNK9ALRQU;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
 				INFOPLIST_FILE = Internationalizer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.korson.Internationalizer;
