@@ -12,13 +12,13 @@ public extension Formatters {
         
         // MARK:- Properties
         
-        private static var currencyFormatter: NumberFormatter = {
+        private static let currencyFormatter: NumberFormatter = {
             let formatter = NumberFormatter()
             formatter.numberStyle = .currency
             return formatter
         }()
         
-        private static var decimalFormatter: NumberFormatter = {
+        private static let decimalFormatter: NumberFormatter = {
             let formatter = NumberFormatter()
             formatter.numberStyle = .decimal
             formatter.minimumFractionDigits = 0
@@ -27,7 +27,7 @@ public extension Formatters {
             return formatter
         }()
         
-        private static var integerFormatter: NumberFormatter = {
+        private static let integerFormatter: NumberFormatter = {
             let formatter = NumberFormatter()
             formatter.numberStyle = .decimal
             formatter.maximumFractionDigits = 0

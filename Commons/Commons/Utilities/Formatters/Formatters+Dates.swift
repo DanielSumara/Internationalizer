@@ -12,28 +12,28 @@ public extension Formatters {
         
         // MARK:- Properties
         
-        private static var shortDateFormatter: DateFormatter = {
+        private static let shortDateFormatter: DateFormatter = {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = Format.shortDate.rawValue
             
             return dateFormatter
         }()
         
-        private static var dateFormatter: DateFormatter = {
+        private static let dateFormatter: DateFormatter = {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = Format.date.rawValue
             
             return dateFormatter
         }()
         
-        private static var timeFormatter: DateFormatter = {
+        private static let timeFormatter: DateFormatter = {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = Format.time.rawValue
             
             return dateFormatter
         }()
         
-        private static var dateAndTimeFormatter: DateFormatter = {
+        private static let dateAndTimeFormatter: DateFormatter = {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = Format.dateAndTime.rawValue
             
